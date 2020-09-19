@@ -133,18 +133,18 @@
      <body>
         <header>
             <div class="container">
-            {{-- @include("partials/header") --}}
+            {{-- @include("partials/form") --}}
             {{-- @include("partials/title") --}}
             </div>
         </header>
         
         <main class="content">
             @yield("title")
-            {{-- @yield("content") --}}
+            @yield("content")
         </main>
 
        <div class="container">
-            {{-- @include("partials/nav") --}}
+            {{-- @include("partials/button") --}}
         </div>
     </body>
 </html>

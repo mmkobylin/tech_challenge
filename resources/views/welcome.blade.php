@@ -11,6 +11,6 @@
 
 @section("content")
    
-   @include("partials/button")
+   @include("partials/form")
 
 @endsection
