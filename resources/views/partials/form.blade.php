@@ -15,7 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $name1Err = "Name is required";
   } else {
     $name1 = $_GET["name1"];
-    // check if name only contains letters and whitespace
   }
 }
   
@@ -24,7 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $name2Err = "Name is required";
   } else {
     $name2 = $_GET["name2"];
-    // check if name only contains letters and whitespace
   }
 }
 
@@ -38,14 +36,12 @@ function test_input($data) {
 
 <form class="form-control" method="GET" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   <h2 class="label">Player1: <input type="text" name="name1" value="<?php echo $name1;?>">
-  <span class="error">* <?php echo $nameErr1;?></span><br>
   <h2 class="label">Player2: <input type="text" name="name2" value="<?php echo $name2;?>">
-  <span class="error">* <?php echo $nameErr2;?></span>
   <br>
-  <input class="sub-btn" type="submit" name="submit" value="Submit">  
+  <input class="sub-btn" type="submit" name="submit" value="Ready?">  
 </form>
 
-<h3>Player's names</h2>
+<h3>Player's names:</h2>
 <div class="list-group"> 
     <?php
         echo $name1;

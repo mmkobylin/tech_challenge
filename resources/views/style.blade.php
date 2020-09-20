@@ -15,9 +15,6 @@
         <style>
 
             .ball {
-                display:relative;
-                margin-top:2rem;
-                margin-left:26rem;
                 height: 1rem;
                 width: 1rem;
                 background: #0f9d18;   
@@ -26,10 +23,7 @@
              body {
                 font-family: 'Orbitron', sans-serif;
                 color: #0f9d18;
-                text-align: center;
                 background: rgb(2,0,36);
-                margin: 1rem;
-                padding: 1rem;
                 {{-- background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(44,76,57,1) 35%, rgba(0,8,10,1) 100%); --}}
             }
 
@@ -88,17 +82,25 @@
                 width: 0.8rem;
                 background: #0f9d18;
                 border-color: rgb(247, 196, 12);
-
             }
 
+            .random-btn {
+
+            }
             .sub-btn {
-                height:4rem;
-                width:4rem;
-                background: #0f9d18;
-                color: white;
+                display:flex; 
+                justify-content:center;
+                margin:1rem;
+                padding:1rem;
+                background: transparent; 
+                color: #FFFF;
                 font-family: 'Press Start 2P', cursive;
-                border-color: rgb(247, 196, 12);
-                text-align: center;
+                border: 2px solid #0f9d18;
+            }
+            .sub-btn:hover {
+                background:#1a4006;
+                color:#FFFF;
+                 border: 6px;
             }
 
             .title { 
