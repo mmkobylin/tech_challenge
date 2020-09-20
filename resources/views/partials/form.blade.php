@@ -36,16 +36,17 @@ function test_input($data) {
 }
 ?>
 
-<form class="" method="GET" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Player1: <input type="text" name="name1" value="<?php echo $name1;?>">
+<form class="form-control" method="GET" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+  <h2 class="label">Player1: <input type="text" name="name1" value="<?php echo $name1;?>">
   <span class="error">* <?php echo $nameErr1;?></span><br>
-  Player2: <input type="text" name="name2" value="<?php echo $name2;?>">
-  <span class="error">* <?php echo $nameErr2;?></span><br>
-  <input class="sub-button" type="submit" name="submit" value="Submit">  
+  <h2 class="label">Player2: <input type="text" name="name2" value="<?php echo $name2;?>">
+  <span class="error">* <?php echo $nameErr2;?></span>
+  <br>
+  <input class="sub-btn" type="submit" name="submit" value="Submit">  
 </form>
 
+<h3>Player's names</h2>
 <div class="list-group"> 
-    <h3>Player's names</h2>
     <?php
         echo $name1;
         echo "<br>";

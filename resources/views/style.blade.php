@@ -23,12 +23,13 @@
                 background: #0f9d18;   
             }
 
-            body {
+             body {
                 font-family: 'Orbitron', sans-serif;
                 color: #0f9d18;
-                display: flex;
-                justify-content: center;
+                text-align: center;
                 background: rgb(2,0,36);
+                margin: 1rem;
+                padding: 1rem;
                 {{-- background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(44,76,57,1) 35%, rgba(0,8,10,1) 100%); --}}
             }
 
@@ -39,17 +40,49 @@
                 color: white;
                 font-family: 'Press Start 2P', cursive;
                 border-color: rgb(247, 196, 12);
-    
             }
+
 
             button:hover{  
                 transform: translateY(-1.5rem);
             }
             
-            header { 
-                display: flex;
+            .form-control{
+                text-align: left;
+                padding:0.5rem;
+                margin:0rem;
+                border: 2px solid #0f9d18;
+
             }
             
+            header { 
+                display: flex;
+                justify-content:space-between;
+            }
+
+            input { 
+                background: transparent; 
+                border: 2px solid #0f9d18;
+                padding:0.2rem;
+            }
+
+            input[type=text] {
+                color:#FFFFFF;
+                font-family: 'Orbitron', sans-serif;	
+            }
+
+            .label {
+                font-size:0.9rem;
+                padding-top:1rem;
+                padding-bottom:1rem;
+                margin:0.5rem;
+            }
+
+            .list-group, p.list-group {
+                padding:2rem;
+                border: 2px solid #0f9d18;
+            }
+
             .paddle {
                 height: 6rem;
                 width: 0.8rem;
@@ -58,10 +91,19 @@
 
             }
 
+            .sub-btn {
+                height:4rem;
+                width:4rem;
+                background: #0f9d18;
+                color: white;
+                font-family: 'Press Start 2P', cursive;
+                border-color: rgb(247, 196, 12);
+                text-align: center;
+            }
+
             .title { 
                 font-family: 'Press Start 2P', cursive;
                 text-align: center;
-                top-margin: 2rem; 
                 padding:1.8rem;
                 letter-spacing: 0.2rem;
                 font-size: 3rem;
