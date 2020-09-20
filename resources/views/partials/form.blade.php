@@ -4,20 +4,57 @@
     @section("title")
     
     @section("content")
-    
-        <form method="get" class="form card">
-                    @csrf
-                        <div class="form-group @error('title') is-invalid @enderror>
-                            @error("first_name")
-                                <p class="invalid-feedback">
-                                    {{ $message }}
-                                </p>
-                            @enderror
-                            <label for="first_name">Player's Name</label>
-                            <input id="first_name" name="first_name" class="form-control" value="{{ old("first_name") }}" />
-                        </div>
-                    <div class="card-footer text-right">
-                        <button class="btn btn-success">Submit</button>
-                    </div>
-                </form>
+
+        <?php
+// define variables and set to empty values
+$nameErr1 = $nameErr2 = "";
+$name1 = $name2 = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+  if (empty($_GET["name1"])) {
+    $name1Err = "Name is required";
+  } else {
+    $name1 = $_GET["name1"];
+    // check if name only contains letters and whitespace
+  }
+}
+  
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+  if (empty($_GET["name2"])) {
+    $name2Err = "Name is required";
+  } else {
+    $name2 = $_GET["name2"];
+    // check if name only contains letters and whitespace
+  }
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+
+{{-- <p><span class="error">* required field</span></p> --}}
+<form method="GET" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+  Player1: <input type="text" name="name1" value="<?php echo $name1;?>">
+  <span class="error">* <?php echo $nameErr1;?></span>
+  <br><br>
+  Player2: <input type="text" name="name2" value="<?php echo $name2;?>">
+  <span class="error">* <?php echo $nameErr2;?></span>
+  <br><br>
+
+  <input type="submit" name="submit" value="Submit">  
+</form>
+
+<?php
+echo "<h2>Your Input:</h2>";
+echo $name1;
+echo "<br>";
+echo $name2;
+?>
+
+</body>
+</html>
     @endsection
