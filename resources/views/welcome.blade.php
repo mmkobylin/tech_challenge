@@ -12,5 +12,6 @@
 @section("content")
    
    @include("partials/form")
+   @include("partials/name_box")
 
 @endsection
