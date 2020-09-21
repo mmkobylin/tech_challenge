@@ -66,32 +66,6 @@ function test_input($data) {
   <br>
   <input class="sub-btn" type="submit" name="submit" value="Randomize?">  
 </form>
-
-<h3>Matches:</h4>
-<div class="list-group"> 
-    <?php
-
-        $allPlayers = [];
-
-        array_push($allPlayers, $name1, $name2, $name3, $name4);
-
-        function randomise($allPlayers) {
-
-            $randomPlay = collect($allPlayers)->shuffle()->all();
-
-                if (count($allPlayers)%2 !== 0 )  {
-                    return "You need an even number of players to randomise!"; 
-                } else {
-                    return "Match 1: " . $randomPlay[0] . " vs " . $randomPlay[1] . " Match 2: " . $randomPlay[2] . " vs " . $randomPlay[3];
-                }
-        };
-
-    print_r( 
-        randomise($allPlayers)
-    );
-
-    ?>
-
 </div>
 
 </body>
