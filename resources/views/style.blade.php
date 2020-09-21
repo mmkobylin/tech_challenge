@@ -61,11 +61,13 @@
             }
 
             input[type=text] {
+                background: transparent; 
+
                 color:#FFFFFF;
                 font-family: 'Orbitron', sans-serif;	
             }
 
-            .label {
+            label {
                 font-size:0.9rem;
                 padding-top:1rem;
                 padding-bottom:1rem;
