@@ -10,67 +10,67 @@
 $nameError = "All fields are required!";
 $name1 = $name2 = $name3 = $name4 = $name5 = $name6 = $name7 = $name8 = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name6"])) {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+  if (empty($_GET["name6"])) {
     $nameError;
   } else {
-    $name6 = test_input($_POST["name6"]);
+    $name6 = test_input($_GET["name6"]);
   }
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name7"])) {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+  if (empty($_GET["name7"])) {
     $nameError;
   } else {
-    $name7 = test_input($_POST["name7"]);
+    $name7 = test_input($_GET["name7"]);
   }
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name8"])) {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+  if (empty($_GET["name8"])) {
     $nameError;
   } else {
-    $name8 = test_input($_POST["name8"]);
+    $name8 = test_input($_GET["name8"]);
   }
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name5"])) {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+  if (empty($_GET["name5"])) {
     $nameError;
   } else {
-    $name5 = test_input($_POST["name5"]);
+    $name5 = test_input($_GET["name5"]);
   }
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name1"])) {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+  if (empty($_GET["name1"])) {
     $nameError;
   } else {
-    $name1 = test_input($_POST["name1"]);
+    $name1 = test_input($_GET["name1"]);
   }
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name2"])) {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+  if (empty($_GET["name2"])) {
     $nameError;
   } else {
-    $name2 = test_input($_POST["name2"]);
+    $name2 = test_input($_GET["name2"]);
   }
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name3"])) {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+  if (empty($_GET["name3"])) {
     $nameError;
   } else {
-    $name3 = test_input($_POST["name3"]);
+    $name3 = test_input($_GET["name3"]);
   }
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name4"])) {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+  if (empty($_GET["name4"])) {
     $nameError;
   } else {
-    $name4 = test_input($_POST["name4"]);
+    $name4 = test_input($_GET["name4"]);
   }
 }
 
@@ -82,7 +82,7 @@ function test_input($data) {
 }
 ?>
 
-<form class="form-control" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+<form class="form-control" method="GET" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
     <div class="players-field">
       <label>Player 1:  <input type="text" name="name1" value="<?php echo $name1;?>" required>
     </div>
@@ -118,20 +118,29 @@ function test_input($data) {
   <h3>Matches:</h4>
 <div class="list-group"> 
     <?php
-        $allPlayers = [];
+      // this is where we declare an empty array where we will put player's names.
+        $allPlayers = []; 
+  
+// Condition to check array is empty or not 
+ 
+if(empty($empty_array)) {
+  echo "Please insert your players' names!";
+}
+else {
+  echo randomise($allPlayers); 
+};
 
-        $allPlayers === [] ? "You need an even number of players to randomise!" : radnomize($allPlayers)
-      ?>
-    <?php
         array_push($allPlayers, $name1, $name2, $name3, $name4, $name5, $name6, $name7, $name8);
+
         function randomise($allPlayers) {
             $randomPlay = collect($allPlayers)->shuffle()->all();
-                if (count($randomPlay)%2 !== 0 )  {
-                    return ; 
+                if ($allPlayers[0] === NULL )  {
+                    return "You need an even number of players to randomise!"; 
                 } else {
                     return "Match 1: " . $randomPlay[0] . " vs " . $randomPlay[1] . " Match 2: " . $randomPlay[2] . " vs " . $randomPlay[3];
                 }
-        };
+          };
+          
     ?>
 </section>
 
