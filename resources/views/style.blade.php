@@ -15,38 +15,33 @@
         <style>
 
             .ball {
+                background: #0f9d18;   
                 height: 1rem;
                 width: 1rem;
-                background: #0f9d18;   
             }
 
              body {
-                font-family: 'Orbitron', sans-serif;
-                color: #0f9d18;
                 background: rgb(2,0,36);
-                {{-- background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(44,76,57,1) 35%, rgba(0,8,10,1) 100%); --}}
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(44,76,57,1) 35%, rgba(0,8,10,1) 100%);
+                color: #0f9d18;
+                font-family: 'Orbitron', sans-serif;
+
             }
 
             button {
-                height:4rem;
-                width:4rem;
                 background: #0f9d18;
+                border-color: rgb(247, 196, 12);
                 color: white;
                 font-family: 'Press Start 2P', cursive;
-                border-color: rgb(247, 196, 12);
-            }
-
-
-            button:hover{  
-                transform: translateY(-1.5rem);
+                height:4rem;
+                width:4rem;
             }
             
             .form-control{
-                text-align: left;
+                border: 2px solid #0f9d18;
                 padding:0.5rem;
                 margin:0rem;
-                border: 2px solid #0f9d18;
-
+                text-align: left;
             }
             
             header { 
@@ -69,85 +64,74 @@
 
             label {
                 font-size:0.9rem;
+                margin:0.5rem;
                 padding-top:1rem;
                 padding-bottom:1rem;
-                margin:0.5rem;
             }
 
             .list-group, p.list-group {
-                padding:2rem;
                 border: 2px solid #0f9d18;
+                padding:2rem;
             }
 
             .paddle {
-                height: 6rem;
-                width: 0.8rem;
                 background: #0f9d18;
                 border-color: rgb(247, 196, 12);
+                height: 6rem;
+                width: 0.8rem;
             }
 
-            .random-btn {
-
-            }
             .sub-btn {
+                background: transparent; 
+                border: 2px solid #0f9d18;
+                color: #FFFF;
                 display:flex; 
+                font-family: 'Press Start 2P', cursive;
                 justify-content:center;
                 margin:1rem;
                 padding:1rem;
-                background: transparent; 
-                color: #FFFF;
-                font-family: 'Press Start 2P', cursive;
-                border: 2px solid #0f9d18;
             }
+
             .sub-btn:hover {
                 background:#1a4006;
+                border: 6px;
                 color:#FFFF;
-                 border: 6px;
             }
 
             .title { 
                 font-family: 'Press Start 2P', cursive;
-                text-align: center;
+                font-size: 3rem;
                 padding:1.8rem;
                 letter-spacing: 0.2rem;
-                font-size: 3rem;
+                padding:1.8rem;
+                text-align: center;
+
             }
 
             @media only screen and (min-width: 360px) {
 
                 .ball {
+                    background: #0f9d18;
                     display:relative;
-                    margin-top:2rem;
-                    margin-left:26rem;
                     height: 1rem;
                     width: 1rem;
-                    background: #0f9d18;
-                    
                 }
 
                 body {
-                    font-family: 'Orbitron', sans-serif;
-                    color: #0f9d18;
+                    background: rgb(2,0,36);
                     display: flex;
                     justify-content: center;
-                    background: rgb(2,0,36);
-                    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(44,76,57,1) 35%, rgba(0,8,10,1) 100%);
+                    {{-- background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(44,76,57,1) 35%, rgba(0,8,10,1) 100%); --}}
                 }
 
                 button {
-                    height:4rem;
-                    width:4rem;
                     background: #0f9d18;
+                    border-color: rgb(247, 196, 12);
                     color: white;
                     font-family: 'Press Start 2P', cursive;
-                    border-color: rgb(247, 196, 12);
-        
+                    height:4rem;
+                    width:4rem;
                 }
-
-                button:hover{  
-                    transform: translateY(-1.5rem);
-                }
-                
 
                 header { 
                     display: flex;
@@ -155,22 +139,21 @@
                 }
                 
                 .paddle {
-                    height: 9rem;
-                    width: 1rem;
                     background: #0f9d18;
+                    border-color: rgb(247, 196, 12);
                     display: flex;
                     justify-content: space-between;
-                    border-color: rgb(247, 196, 12);
+                    height: 9rem;
+                    width: 1rem;
 
                 }
 
                 .title { 
                     font-family: 'Press Start 2P', cursive;
                     font-size: 4rem;
-                    text-align: center;
-                    margin: 3rem; 
                     letter-spacing: 0.5rem;
-                    font-size: 4.5rem;
+                    margin: 3rem; 
+                    text-align: center;
                 }
             }
   
@@ -179,8 +162,7 @@
      <body>
         <header>
             <div class="container">
-            {{-- @include("partials/form") --}}
-            {{-- @include("partials/title") --}}
+
             </div>
         </header>
         
