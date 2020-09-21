@@ -12,6 +12,6 @@
 @section("content")
    
    @include("partials/form")
-   @include("partials/name_box")
+   {{-- @include("partials/name_box") --}}
 
 @endsection

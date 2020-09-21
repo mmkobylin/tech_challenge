@@ -36,6 +36,7 @@
                 height:4rem;
                 width:4rem;
             }
+         
 
             .form-control{
                 text-align: left;
@@ -75,6 +76,11 @@
                 border-color: rgb(247, 196, 12);
                 height: 6rem;
                 width: 0.8rem;
+            }
+
+            .players-field {
+                margin:0.5rem;
+                padding:0.5rem;
             }
 
             .sub-btn {

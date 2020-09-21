@@ -11,7 +11,7 @@
 
 @section("content")
    
-   @include("partials/form._logic")
+   @include("partials/form_logic")
    @include("partials/name_box")
 
 @endsection
