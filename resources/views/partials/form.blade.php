@@ -50,10 +50,10 @@ function test_input($data) {
 ?>
 
 <form class="form-control" method="GET" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-    <label>Player 1 : <input type="text" name="name1" value="<?php echo $name1;?>"><br><br>
-    <label>Player 2 : <input type="text" name="name2" value="<?php echo $name2;?>"><br><br>
-    <label>Player 3 : <input type="text" name="name3" value="<?php echo $name3;?>"><br><br>
-    <label>Player 4 : <input type="text" name="name4" value="<?php echo $name4;?>"><br><br>
+    <label>Player1: <input type="text" name="name1" value="<?php echo $name1;?>"><br><br>
+    <label>Player2: <input type="text" name="name2" value="<?php echo $name2;?>"><br><br>
+    <label>Player3: <input type="text" name="name3" value="<?php echo $name3;?>"><br><br>
+    <label>Player4: <input type="text" name="name4" value="<?php echo $name4;?>"><br><br>
   <br>
   <input class="sub-btn" type="submit" name="submit" value="Randomize?">  
 </form>
@@ -64,7 +64,7 @@ function test_input($data) {
 
         $allPlayers = [];
 
-        array_push($allPlayers, $name1, $name2, $name3, $name4);
+        array_push($allPlayers, $name1, $name2, $name3);
 
         function randomise($allPlayers) {
 
