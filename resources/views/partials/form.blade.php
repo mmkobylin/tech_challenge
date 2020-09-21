@@ -51,16 +51,16 @@ function test_input($data) {
 ?>
 
 <form class="form-control" method="GET" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-    <label>Player 1:  <input type="text" name="name1" value="<?php echo $name1;?>"><br>
+    <label>Player 1:  <input type="text" name="name1" value="<?php echo $name1;?>">
     <span class="error"><?php echo $nameError;?></span><br><br>
 
-    <label>Player2: <input type="text" name="name2" value="<?php echo $name2;?>"><br>
+    <label>Player2: <input type="text" name="name2" value="<?php echo $name2;?>">
     <span class="error"><?php echo $nameError;?></span><br><br>
 
-    <label>Player3: <input type="text" name="name3" value="<?php echo $name3;?>"><br>
+    <label>Player3: <input type="text" name="name3" value="<?php echo $name3;?>">
     <span class="error"><?php echo $nameError;?></span><br><br>
 
-    <label>Player4: <input type="text" name="name4" value="<?php echo $name4;?>"><br>
+    <label>Player4: <input type="text" name="name4" value="<?php echo $name4;?>">
     <span class="error"><?php echo $nameError;?></span><br><br>
 
   <br>

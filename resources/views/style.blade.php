@@ -36,11 +36,8 @@
                 height:4rem;
                 width:4rem;
             }
-            
+
             .form-control{
-                border: 2px solid #0f9d18;
-                padding:0.5rem;
-                margin:0rem;
                 text-align: left;
             }
             
@@ -52,12 +49,10 @@
             input { 
                 background: transparent; 
                 border: 2px solid #0f9d18;
-                padding:0.2rem;
             }
 
             input[type=text] {
                 background: transparent; 
-
                 color:#FFFFFF;
                 font-family: 'Orbitron', sans-serif;	
             }
@@ -65,13 +60,14 @@
             label {
                 font-size:0.9rem;
                 margin:0.5rem;
-                padding-top:1rem;
-                padding-bottom:1rem;
+                padding:1rem;
             }
 
             .list-group, p.list-group {
                 border: 2px solid #0f9d18;
                 padding:2rem;
+                margin:2rem;
+
             }
 
             .paddle {
@@ -131,6 +127,13 @@
                     font-family: 'Press Start 2P', cursive;
                     height:4rem;
                     width:4rem;
+                }
+
+                .form-control{
+                    border: 2px solid #0f9d18;
+                    padding:2rem;
+                    margin:2rem;
+                    text-align: center;
                 }
 
                 header { 
