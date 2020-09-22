@@ -16,5 +16,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/index', 'GamesController@create'); 
+// Route::get('/', 'Games@create'); //initial form view
+// Route::post('/', 'Games@create'); // next part
 

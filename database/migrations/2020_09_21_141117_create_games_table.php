@@ -15,10 +15,14 @@ class CreateGamesTable extends Migration
         {
             Schema::create('games', function (Blueprint $table) {
                 $table->id();
-                $table->string("player1", 30);
-                $table->string("player2", 30);
-                $table->string("player3", 30);
-                $table->string("player4", 30);
+                $table->string("name1", 30);
+                $table->string("name2", 30);
+                $table->string("name3", 30);
+                $table->string("name4", 30);
+                $table->string("name5", 30);
+                $table->string("name6", 30);
+                $table->string("name7", 30);
+                $table->string("name8", 30);
                 $table->timestamps();
         });
     }
