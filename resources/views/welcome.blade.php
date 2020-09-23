@@ -3,15 +3,10 @@
 {{-- @extends("title")  --}}
 {{-- @extends("header") --}}
 
-@section("title")
-
-    @include("partials/header")
-
-@endsection
 
 @section("content")
    
-   @include("partials/form")
+   @include("partials/simple_form")
    {{-- @include("partials/name_box") --}}
 
 @endsection
