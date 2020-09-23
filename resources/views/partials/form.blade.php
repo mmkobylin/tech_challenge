@@ -87,7 +87,7 @@ function test_input($data) {
 
     //this is where we checking if the players are entered
     print_r((randomise($allPlayers) === " vs " . " Match 2: ". " vs ") ?
-        "Please enter names!" : "Match 1:" . randomise($allPlayers) //it does not want the ; HERE!!
+        "Please enter names!" : "Match 1: " . randomise($allPlayers) //it does not want the ; HERE!!
     );
 
     ?>
