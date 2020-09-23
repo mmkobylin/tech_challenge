@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-### Ping Pong Challenge
+# Ping Pong Challenge
 
 ## The Brief
 
@@ -29,7 +29,6 @@ My MVP should:
 
 I have decided to implement PHP for the project, because I felt I had best understanding of the system. Also PHP is compatible with the CSS, which I considered invaluable asset. 
 
-
 ## Idea
 
 I decided to stylize the ping pong for an old fashion arcade game Pong. Yet instead of going to a black and white theme, I decided to go with a black, white and green. The website will still be readable, but looking more modern, and more engaging for the eye of the user. 
@@ -37,7 +36,9 @@ I decided to stylize the ping pong for an old fashion arcade game Pong. Yet inst
 I decided to design the mobile version first to make it load faster on smaller devices. Then I will design the desktop one, using media queries.
  
 
-## Components: 
+## Style: 
+
+Currently all the components and it's features are in alphabetical order in the style.blade.php. 
 
 Because the simplicity of the traditional arcade games, there was only so much I could write without loosing the clarity of the idea. 
 
