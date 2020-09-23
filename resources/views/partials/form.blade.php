@@ -82,12 +82,12 @@ function test_input($data) {
 
         function randomise($allPlayers) {
             $randomPlay = collect($allPlayers)->shuffle()->all();
-              return $randomPlay[0] . $randomPlay[1] . $randomPlay[2] . $randomPlay[3];
+              return $randomPlay[0] . " vs ". $randomPlay[1] . " Match 2: ". $randomPlay[2] . " vs " . $randomPlay[3];
         };
 
-    
-    print_r((randomise($allPlayers) === "") ?
-        "Please enter names!" : "You have names already" //it does not want the ; HERE!!
+    //this is where we checking if the players are entered
+    print_r((randomise($allPlayers) === " vs " . " Match 2: ". " vs ") ?
+        "Please enter names!" : "Match 1:" . randomise($allPlayers) //it does not want the ; HERE!!
     );
 
     ?>
