@@ -22,9 +22,11 @@
 
              body {
                 background: rgb(2,0,36);
-                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(44,76,57,1) 35%, rgba(0,8,10,1) 100%);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,76,57,1) 35%, rgba(0,8,10,1) 100%);
                 color: #0f9d18;
                 font-family: 'Orbitron', sans-serif;
+                text-align:center;
+                line-height: 1rem;
 
             }
 
@@ -37,6 +39,11 @@
                 width:4rem;
             }
          
+            .card-body{
+                border: none;
+                margin:1rem;
+                text-align:center;
+            }
 
             .form-control{
                 text-align: left;
@@ -50,6 +57,7 @@
             input { 
                 background: transparent; 
                 border: 2px solid #0f9d18;
+                margin:0.5rem;
             }
 
             input[type=text] {
@@ -60,8 +68,6 @@
 
             label {
                 font-size:0.9rem;
-                margin:0.5rem;
-                padding:1rem;
             }
 
             .list-group, p.list-group {
@@ -86,17 +92,16 @@
                 background: transparent; 
                 border: 2px solid #0f9d18;
                 color: #FFFF;
-                display:flex; 
                 font-family: 'Press Start 2P', cursive;
-                justify-content:center;
-                margin:1rem;
-                padding:1rem;
+                padding:2rem;
+                margin:2rem;
+
             }
 
             .sub-btn:hover {
-                background:#1a4006;
-                border: 6px;
-                color:#FFFF;
+                background:black;
+                border: 4px solid #0f9d18;
+                padding:2rem;
             }
 
             .title { 
@@ -122,6 +127,7 @@
                     background: rgb(2,0,36);
                     display: flex;
                     justify-content: center;
+
                     {{-- background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(44,76,57,1) 35%, rgba(0,8,10,1) 100%); --}}
                 }
 
@@ -146,6 +152,11 @@
                     justify-content: space-around;
                 }
                 
+                .list-group, p.list-group: {
+                    width:40%;
+                    text-align:center;
+                }
+
                 .paddle {
                     background: #0f9d18;
                     border-color: rgb(247, 196, 12);

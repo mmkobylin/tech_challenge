@@ -65,10 +65,11 @@ function test_input($data) {
       <div class="players-field">
         <label>Player4: <input type="text" name="name4" value="<?php echo $name4;?>" required>
       </div>
-      <span class="error"><?php echo $nameError;?></span><br><br>
+      <span class="error"><?php echo $nameError;?></span><br>
+      <input class="sub-btn" type="submit" name="submit" value="Randomize?"> 
+
     </fieldset>
-  <br>
-  <input class="sub-btn" type="submit" name="submit" value="Randomize?">  
+ 
 </form>
 </div> 
 <section>
@@ -84,6 +85,8 @@ function test_input($data) {
             $randomPlay = collect($allPlayers)->shuffle()->all();
               return $randomPlay[0] . " vs ". $randomPlay[1] . " Match 2: ". $randomPlay[2] . " vs " . $randomPlay[3];
         };
+
+
 
     //this is where we checking if the players are entered
     print_r((randomise($allPlayers) === " vs " . " Match 2: ". " vs ") ?
