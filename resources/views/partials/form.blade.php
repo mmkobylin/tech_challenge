@@ -78,6 +78,7 @@ function test_input($data) {
       // this is where we declare an empty array where we will put player's names.
         $allPlayers = [];
         $randomPlay= [];
+        
         collect(array_push($allPlayers, $name1, $name2, $name3, $name4));
 
         function randomise($allPlayers) {
@@ -85,6 +86,7 @@ function test_input($data) {
               return $randomPlay[0] . " vs ". $randomPlay[1] . " Match 2: ". $randomPlay[2] . " vs " . $randomPlay[3];
         };
 
+   
     //this is where we checking if the players are entered
     print_r((randomise($allPlayers) === " vs " . " Match 2: ". " vs ") ?
         "Please enter names!" : "Match 1: " . randomise($allPlayers) //it does not want the ; HERE!!
