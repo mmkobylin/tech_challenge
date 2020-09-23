@@ -114,7 +114,7 @@ function test_input($data) {
 
         function randomise($allPlayers) {
             $randomPlay = collect($allPlayers)->shuffle()->all();
-              return "Match 1: " . $randomPlay[0] . " vs " . $randomPlay[1] . " Match 2: " . $randomPlay[2] . " vs " . $randomPlay[3];
+              return $randomPlay[0] . " " . $randomPlay[1] . " ". $randomPlay[2] . " ". $randomPlay[3];
         };
 
     print_r( 
