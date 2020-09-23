@@ -19,10 +19,6 @@ class CreateGamesTable extends Migration
                 $table->string("name2", 30);
                 $table->string("name3", 30);
                 $table->string("name4", 30);
-                $table->string("name5", 30);
-                $table->string("name6", 30);
-                $table->string("name7", 30);
-                $table->string("name8", 30);
                 $table->timestamps();
         });
     }

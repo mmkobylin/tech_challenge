@@ -68,7 +68,6 @@
                 border: 2px solid #0f9d18;
                 padding:2rem;
                 margin:2rem;
-
             }
 
             .paddle {
