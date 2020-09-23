@@ -9,7 +9,6 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/scss" href=""">
 
         <!-- Styles -->
 
@@ -26,28 +25,31 @@
                 background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(44,76,57,1) 35%, rgba(0,8,10,1) 100%);
                 color: #0f9d18;
                 font-family: 'Orbitron', sans-serif;
+                line-height: 2;
+                padding:1rem;
+                text-align: center;
+            }
 
+            .card-body {
+                border:none;
             }
 
             button {
                 background: #0f9d18;
                 border-color: rgb(247, 196, 12);
-                color: white;
+                color: #FFFF;
                 font-family: 'Press Start 2P', cursive;
                 height:4rem;
                 width:4rem;
             }
-            
+        
             .form-control{
                 border: 2px solid #0f9d18;
-                padding:0.5rem;
-                margin:0rem;
-                text-align: left;
             }
             
             header { 
                 display: flex;
-                justify-content:space-between;
+                justify-content:space-around;
             }
 
             input { 
@@ -57,22 +59,25 @@
             }
 
             input[type=text] {
-                background: transparent; 
-
+                background: #0000; 
                 color:#FFFFFF;
                 font-family: 'Orbitron', sans-serif;	
             }
 
+            input:active {
+                background:black;
+            }
+
             label {
                 font-size:0.9rem;
-                margin:0.5rem;
-                padding-top:1rem;
-                padding-bottom:1rem;
+                
             }
 
             .list-group, p.list-group {
                 border: 2px solid #0f9d18;
+                color:#FFFF;
                 padding:2rem;
+
             }
 
             .paddle {
@@ -81,22 +86,25 @@
                 height: 6rem;
                 width: 0.8rem;
             }
-
+            .players-field {
+                margin:1.5rem;
+            }
+            
             .sub-btn {
                 background: transparent; 
                 border: 2px solid #0f9d18;
                 color: #FFFF;
-                display:flex; 
                 font-family: 'Press Start 2P', cursive;
-                justify-content:center;
-                margin:1rem;
-                padding:1rem;
+                padding:2rem;
+                margin:2rem;
+
             }
 
             .sub-btn:hover {
-                background:#1a4006;
-                border: 6px;
+                background:#black;
+                border: 3px solid #0f9d18;
                 color:#FFFF;
+                padding:2rem;
             }
 
             .title { 
@@ -132,6 +140,10 @@
                     font-family: 'Press Start 2P', cursive;
                     height:4rem;
                     width:4rem;
+                }
+
+                .card-body, fieldset {
+                    border:none;
                 }
 
                 header { 

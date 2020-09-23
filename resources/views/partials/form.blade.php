@@ -50,7 +50,7 @@ function test_input($data) {
 }
 ?>
 
-<form class="form-control" method="GET" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+<form class="form-control" method="GET" autocomplete="off" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
     <fieldset class="card-body">
     @csrf
       
@@ -95,10 +95,10 @@ function test_input($data) {
 
         function randomise($allPlayers) {
             $randomPlay = collect($allPlayers)->shuffle()->all();
-              return $randomPlay[0] . " vs ". $randomPlay[1] . " Match 2: ". $randomPlay[2] . " vs " . $randomPlay[3];
+              return $randomPlay[0] . " vs ". $randomPlay[1] ." Match 2: ". $randomPlay[2] . " vs " . $randomPlay[3];
         };
 
-
+      
 
     //this is where we checking if the players are entered
     print_r((randomise($allPlayers) === " vs " . " Match 2: ". " vs ") ?
