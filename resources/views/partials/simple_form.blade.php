@@ -14,9 +14,14 @@
 <?php
 //Here is the php code to store the user input to the variable
 
+$allPlayers = [];
 $firstname=$_GET['firstname'];
 $lastname=$_GET['lastname'];
-$fullname = "$firstname"." "."$lastname";//concatination with a space in between
-echo $fullname;
+//this is where i collect the variables
+collect(array_push($allPlayers, $firstname, $lastname));
+//it is actually shuffling!
+$randomPlay = (collect($allPlayers)->shuffle()->all());
+
+print_r(($randomPlay[0] . ' vs ' . $randomPlay[1]));
 ?>
 </body>
