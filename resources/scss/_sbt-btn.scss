@@ -1,0 +1,14 @@
+.sbt-btn {
+    background: transparent; 
+    border: 2px solid var(--base-color);
+    color: var(--letters-color-secondary);
+    font-family: var(--font-secondary);
+    height: 3rem;
+    padding:1rem;
+}
+
+.sbt-btn:hover {
+    background: var(--background-color-secondary);
+    border: 6px;
+    color: var(--letters-color-secondary);;
+}
