@@ -8,39 +8,7 @@
 <?php
 // define variables and set to empty values
 $nameError = "All fields are required!";
-$name1 = $name2 = $name3 = $name4 = $name5 = $name6 = $name7 = $name8 = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
-  if (empty($_GET["name6"])) {
-    $nameError;
-  } else {
-    $name6 = test_input($_GET["name6"]);
-  }
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
-  if (empty($_GET["name7"])) {
-    $nameError;
-  } else {
-    $name7 = test_input($_GET["name7"]);
-  }
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
-  if (empty($_GET["name8"])) {
-    $nameError;
-  } else {
-    $name8 = test_input($_GET["name8"]);
-  }
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
-  if (empty($_GET["name5"])) {
-    $nameError;
-  } else {
-    $name5 = test_input($_GET["name5"]);
-  }
-}
+$name1 = $name2 = $name3 = $name4 = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
   if (empty($_GET["name1"])) {
@@ -108,17 +76,18 @@ function test_input($data) {
 <div class="list-group"> 
     <?php
       // this is where we declare an empty array where we will put player's names.
-              $allPlayers = [];
-
+        $allPlayers = [];
+        $randomPlay= [];
         collect(array_push($allPlayers, $name1, $name2, $name3, $name4));
 
         function randomise($allPlayers) {
             $randomPlay = collect($allPlayers)->shuffle()->all();
-              return $randomPlay[0] . " " . $randomPlay[1] . " ". $randomPlay[2] . " ". $randomPlay[3];
+              return $randomPlay[0] . " vs ". $randomPlay[1] . $randomPlay[2] . $randomPlay[3];
         };
 
-    print_r( 
-        randomise($allPlayers)
+    
+    print_r((randomise($allPlayers) === "") ?
+        "Please enter names!" : "You have names already" //it does not want the ; HERE!!
     );
 
     ?>
