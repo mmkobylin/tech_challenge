@@ -21,9 +21,9 @@
             }
 
              body {
-                background: rgb(2,0,36);
-                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(44,76,57,1) 35%, rgba(0,8,10,1) 100%);
-                color: #0f9d18;
+                 background: rgb(3,4,10);
+background: linear-gradient(90deg, rgba(3,4,10,1) 23%, rgba(44,48,92,1) 86%);
+              color: #0f9d18;
                 font-family: 'Orbitron', sans-serif;
                 line-height: 2;
                 padding:1rem;
@@ -127,10 +127,11 @@
                 }
 
                 body {
-                    background: rgb(2,0,36);
+                    color:#0f9d18;
                     display: flex;
                     justify-content: center;
-                    {{-- background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(44,76,57,1) 35%, rgba(0,8,10,1) 100%); --}}
+                    background: rgb(44,48,92);
+                    background: linear-gradient(90deg, rgba(44,48,92,1) 0%, rgba(3,4,10,1) 10%, rgba(5,2,2,1) 82%, rgba(29,60,42,1) 100%);
                 }
 
                 button {
