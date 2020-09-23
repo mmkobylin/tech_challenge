@@ -7,6 +7,48 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+### Ping Pong Challenge
+
+## The Brief
+
+The core of the challenge is to create a tool which randomly creates pairings for a table tennis tournament bracket from a list of names collected from the user.
+
+It's up to you how you implement this, with JavaScript, React, or PHP, as a web page, or as an app.
+
+Some optional advanced features might include:
+ability to record scores for each player, or mark which player won from each pairing, to create the next round of the tournament playoffs
+continued rounds created until the final (last 2 players who have won all matches to date play each other, one marked as the winner)
+
+## Plan 
+
+My MVP should:
+1. be able to take input for names of the players;
+2. be able to randomly pick pairs out;
+3. be able to send that information back to user;
+4. Have CSS styling that makes the website accessible and easy to use;
+
+I have decided to implement PHP for the project, because I felt I had best understanding of the system. Also PHP is compatible with the CSS, which I considered invaluable asset. 
+
+
+## Idea
+
+I decided to stylize the ping pong for an old fashion arcade game Pong. Yet instead of going to a black and white theme, I decided to go with a black, white and green. The website will still be readable, but looking more modern, and more engaging for the eye of the user. 
+
+I decided to design the mobile version first to make it load faster on smaller devices. Then I will design the desktop one, using media queries.
+ 
+
+## Components: 
+
+Because the simplicity of the traditional arcade games, there was only so much I could write without loosing the clarity of the idea. 
+
+I would need:
+
+1. Form 
+2. buttons
+3. ping pong ball
+4. ping pong paddle
+5. Frames to show the names of the players paired up.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
@@ -31,30 +73,9 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 
 We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
-
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 

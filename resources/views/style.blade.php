@@ -22,8 +22,8 @@
 
              body {
                  background: rgb(3,4,10);
-background: linear-gradient(90deg, rgba(3,4,10,1) 23%, rgba(44,48,92,1) 86%);
-              color: #0f9d18;
+                background: linear-gradient(90deg, rgba(3,4,10,1) 23%, rgba(44,48,92,1) 86%);
+                color: #0f9d18;
                 font-family: 'Orbitron', sans-serif;
                 line-height: 2;
                 padding:1rem;
