@@ -3,25 +3,33 @@
 <body>
 
 <form method="get">
-  First name:<br>
+  Player1:<br>
   <input type="text" name="firstname">
   <br>
-  Last name:<br>
+  Player2:<br>
   <input type="text" name="lastname"><br>
-  <button class="sbt-btn" type="submit">thisisgonnawork</button>
+
+  Player3:<br>
+  <input type="text" name="firstname">
+  <br>
+  Player4:<br>
+  <input type="text" name="lastname"><br>
+
+  <button class="sbt-btn" type="submit">Randomise?</button>
 </form>
 
 <?php
 //Here is the php code to store the user input to the variable
 
 $allPlayers = [];
-$firstname=$_GET['firstname'];
-$lastname=$_GET['lastname'];
+$Player1=$_GET['firstname'];
+$Player2=$_GET['lastname'];
+$Player3=$_GET['firstname'];
+$Player4=$_GET['lastname']; 
 //this is where i collect the variables
-collect(array_push($allPlayers, $firstname, $lastname));
+collect(array_push($allPlayers, $Player1, $Player2));
 //it is actually shuffling!
 $randomPlay = (collect($allPlayers)->shuffle()->all());
 
-print_r(($randomPlay[0] . ' vs ' . $randomPlay[1]));
-?>
+print_r(($randomPlay[0] . ' vs ' . $randomPlay[1]))?>
 </body>
