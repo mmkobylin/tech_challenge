@@ -9,7 +9,6 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet">
-
         <!-- Styles -->
 
         <style>
@@ -22,11 +21,9 @@
 
              body {
                 background: rgb(2,0,36);
-                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,76,57,1) 35%, rgba(0,8,10,1) 100%);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(44,76,57,1) 35%, rgba(0,8,10,1) 100%);
                 color: #0f9d18;
                 font-family: 'Orbitron', sans-serif;
-                text-align:center;
-                line-height: 1rem;
 
             }
 
@@ -38,14 +35,11 @@
                 height:4rem;
                 width:4rem;
             }
-         
-            .card-body{
-                border: none;
-                margin:1rem;
-                text-align:center;
-            }
-
+            
             .form-control{
+                border: 2px solid #0f9d18;
+                padding:0.5rem;
+                margin:0rem;
                 text-align: left;
             }
             
@@ -57,23 +51,26 @@
             input { 
                 background: transparent; 
                 border: 2px solid #0f9d18;
-                margin:0.5rem;
+                padding:0.2rem;
             }
 
             input[type=text] {
                 background: transparent; 
+
                 color:#FFFFFF;
                 font-family: 'Orbitron', sans-serif;	
             }
 
             label {
                 font-size:0.9rem;
+                margin:0.5rem;
+                padding-top:1rem;
+                padding-bottom:1rem;
             }
 
             .list-group, p.list-group {
                 border: 2px solid #0f9d18;
                 padding:2rem;
-                margin:2rem;
             }
 
             .paddle {
@@ -83,25 +80,21 @@
                 width: 0.8rem;
             }
 
-            .players-field {
-                margin:0.5rem;
-                padding:0.5rem;
-            }
-
             .sub-btn {
                 background: transparent; 
                 border: 2px solid #0f9d18;
                 color: #FFFF;
+                display:flex; 
                 font-family: 'Press Start 2P', cursive;
-                padding:2rem;
-                margin:2rem;
-
+                justify-content:center;
+                margin:1rem;
+                padding:1rem;
             }
 
             .sub-btn:hover {
-                background:black;
-                border: 4px solid #0f9d18;
-                padding:2rem;
+                background:#1a4006;
+                border: 6px;
+                color:#FFFF;
             }
 
             .title { 
@@ -127,7 +120,6 @@
                     background: rgb(2,0,36);
                     display: flex;
                     justify-content: center;
-
                     {{-- background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(44,76,57,1) 35%, rgba(0,8,10,1) 100%); --}}
                 }
 
@@ -140,23 +132,11 @@
                     width:4rem;
                 }
 
-                .form-control{
-                    border: 2px solid #0f9d18;
-                    padding:2rem;
-                    margin:2rem;
-                    text-align: center;
-                }
-
                 header { 
                     display: flex;
                     justify-content: space-around;
                 }
                 
-                .list-group, p.list-group: {
-                    width:40%;
-                    text-align:center;
-                }
-
                 .paddle {
                     background: #0f9d18;
                     border-color: rgb(247, 196, 12);
@@ -191,7 +171,6 @@
         </main>
 
        <div class="container">
-            {{-- @include("partials/button") --}}
         </div>
     </body>
 </html>

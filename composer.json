@@ -59,7 +59,7 @@
             "@php artisan key:generate --ansi"
         ]
     },
-    
+
     "require-dev": {
         "panique/php-sass": "1.0"
     }
