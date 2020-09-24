@@ -27,7 +27,7 @@
             <input type="text" name="name4" value="<?php echo $name4;?>" required>
         </div>
         
-        <button class="sbt-btn" type="submit">Randomise?</button>
+        <button class="button" type="submit">Randomise?</button>
     </fieldset>
 </form>
 
@@ -51,14 +51,14 @@ $randomPlay = (collect($allPlayers)->shuffle()->all());
 <br>
 
 {{-- <?php
-print_r('MATCH 1:')?> <br>  --}}
+print_r('MATCH 1:   ')?> <br>  --}}
 <h3><?php
 print_r(($randomPlay[0] . ' vs ' . $randomPlay[1] === ' vs ') ? 'Please enter the names' : ('MATCH 1:' . $randomPlay[0] . ' vs ' . $randomPlay[1]));?>
 <br></h3>
 <?php
 print_r(' and '); ?> <br> 
 {{-- <?php
-print_r('MATCH 2:')?> --}}
+print_r('MATCH 2:   ')?> --}}
 <h3><?php
 print_r(($randomPlay[2] . ' vs ' . $randomPlay[3] === ' vs ') ? "click 'Randomise' to play!" : ('MATCH 2:' . $randomPlay[1] . ' vs ' . $randomPlay[2]));?>
 </body>

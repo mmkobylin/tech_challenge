@@ -20,8 +20,8 @@
                 width: 1rem;
             }
 
-             body {
-                 background: rgb(3,4,10);
+            body {
+                background: rgb(3,4,10);
                 background: linear-gradient(90deg, rgba(3,4,10,1) 23%, rgba(44,48,92,1) 86%);
                 color: #0f9d18;
                 font-family: 'Orbitron', sans-serif;
@@ -34,15 +34,42 @@
                 border:none;
             }
 
-            button {
+            {{-- button {
                 background: #0f9d18;
                 border-color: rgb(247, 196, 12);
                 color: #FFFF;
                 font-family: 'Press Start 2P', cursive;
                 height:4rem;
                 width:4rem;
+            } --}}
+
+                        
+            .button {
+                background: transparent; 
+                border: 2px solid #0f9d18;
+                color: #FFFF;
+                font-family: 'Press Start 2P', cursive;
+                padding:2rem;
+                margin:2rem;
+                width: fit-content;
+
             }
-        
+
+            .button:hover {
+                background: #0000;
+                border: 3px solid #0f9d18;
+                color:#FFFF;
+                padding:2rem;
+            }
+
+{{-- Clicked effect (moves down slightly) --}}
+            .button:active {
+                background: #0000;
+
+                box-shadow: 0 3px rgb(13, 5, 83);
+                transform: translateY(8px);
+            }
+
             .form-control{
                 border: 2px solid #0f9d18;
             }
@@ -88,23 +115,6 @@
             }
             .players-field {
                 margin:1.5rem;
-            }
-            
-            .sub-btn {
-                background: transparent; 
-                border: 2px solid #0f9d18;
-                color: #FFFF;
-                font-family: 'Press Start 2P', cursive;
-                padding:2rem;
-                margin:2rem;
-
-            }
-
-            .sub-btn:hover {
-                background:#black;
-                border: 3px solid #0f9d18;
-                color:#FFFF;
-                padding:2rem;
             }
 
             .title { 
