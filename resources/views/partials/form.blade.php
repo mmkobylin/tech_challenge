@@ -55,8 +55,11 @@ $randomPlay = (collect($allPlayers)->shuffle()->all());
 ?>
     <br>
     <div class="column">
+    {{-- are players randomize and present? if so, we have a match --}}
         <h3 class="match"><?php print_r(($randomPlay[0] !== NULL && $randomPlay[1] !== NULL ) ?  'MATCH 1 :' : NULL ) ?></h3>
+        {{-- this is where we display player - if it is NULL, it does not display anything --}}
             <p class="player"><?php print_r($randomPlay[0]) ?></p>
+        {{-- if we dont have a match, we don't need versus --}}
             <p class="versus"><?php print_r(($randomPlay[0] === NULL || $randomPlay[1] === NULL ) ?  'Please enter the names' : ' vs ') ?></p>
             <p class="player"><?php print_r($randomPlay[1]) ?></p>
     </div>
