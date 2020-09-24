@@ -7,26 +7,31 @@
 <form class="form-control" method="GET" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
     <fieldset class="card-body">
       @csrf
-        <div class="players-field">
-            <label>Player 1:</label>
-            <input type="text" name="firstname" value="<?php echo $firstname;?>" required>
-        </div>
-        
-        <div class="players-field">
-            <label>Player2:</label>
-            <input type="text" name="lastname" value="<?php echo $lastname;?>" required>
+        <div class="column">
+
+            <div class="players-field">
+                <label>Player1:</label><br>
+                <input type="text" name="firstname" value="<?php echo $firstname;?>" required>
+            </div>
+            
+            <div class="players-field">
+                <label>Player2:</label><br>
+                <input type="text" name="lastname" value="<?php echo $lastname;?>" required>
+            </div>
         </div>
 
-        <div class="players-field">
-            <label>Player3:</label>
-            <input type="text" name="name3" value="<?php echo $name3;?>" required>
-        </div>
+        <div class="column">
 
-        <div class="players-field">
-            <label>Player4:</label>
-            <input type="text" name="name4" value="<?php echo $name4;?>" required>
-        </div>
-        
+            <div class="players-field">
+                <label>Player3:</label><br>
+                <input type="text" name="name3" value="<?php echo $name3;?>" required>
+            </div>
+
+            <div class="players-field">
+                <label>Player4:</label><br>
+                <input type="text" name="name4" value="<?php echo $name4;?>" required>
+            </div>
+        </div>       
         <button class="button" type="submit">Randomise?</button>
     </fieldset>
 </form>

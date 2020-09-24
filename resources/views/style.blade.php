@@ -176,8 +176,10 @@
                     border-color: rgb(247, 196, 12);
                     color: white;
                     font-family: 'Press Start 2P', cursive;
+                    flex:100%;
                     height:4rem;
                     width:4rem;
+
                 }
 
                 .column {
