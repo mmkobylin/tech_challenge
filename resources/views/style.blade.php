@@ -26,7 +26,6 @@
                 color: #0f9d18;
                 font-family: 'Orbitron', sans-serif;
                 line-height: 1.5;
-                padding:1rem;
                 text-align: center;
             }
 
@@ -44,7 +43,6 @@
                 margin:2rem;
                 width: fit-content;
 
-
             }
 
             .button:hover {
@@ -60,20 +58,15 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
 {{-- Clicked effect (moves down slightly) --}}
             .button:active, .button:hover{
                 background: black;
-                box-shadow: 0 3px rgb(13, 5, 83);
                 transform: translateY(8px);
                 -webkit-box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
 -moz-box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
 box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
             }
-
-            .form-control{
-                border: 2px solid #0f9d18;
-            }
-            
+    
             header { 
                 display: flex;
-                justify-content:space-around;
+                justify-content: space-around;
             }
 
             input { 
@@ -87,7 +80,6 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
                 color:#FFFFFF;
                 font-family: 'Orbitron', sans-serif;
                 font-size:1rem;	
-                
             }
 
             input:active, input:hover {
@@ -105,6 +97,14 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
 
             }
 
+            .matches {
+                border: 5px double #0f9d18;
+                box-shadow: 0 3px rgb(13, 5, 83);
+                padding-bottom:2rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+
             .paddle {
                 background: #0f9d18;
                 border-color: rgb(247, 196, 12);
@@ -117,10 +117,8 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
 
             .title { 
                 font-family: 'Press Start 2P', cursive;
-                font-size: 3rem;
-                padding:1.8rem;
+                font-size: 2.7rem;
                 letter-spacing: 0.2rem;
-                padding:1.8rem;
                 text-align: center;
             }
 
@@ -176,8 +174,9 @@ background: linear-gradient(90deg, rgba(18,13,5,1) 22%, rgba(36,80,30,1) 29%, rg
 
                 .column {
                     float: left;
-                    width: 50%;
+                    width: 45%;
                     padding: 1rem;
+                    margin:1rem;
                 }
 
                 .card-body, fieldset {
@@ -186,7 +185,7 @@ background: linear-gradient(90deg, rgba(18,13,5,1) 22%, rgba(36,80,30,1) 29%, rg
 
                 header { 
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: space-between;
                 }
                 
                 input {
@@ -202,6 +201,10 @@ background: linear-gradient(90deg, rgba(18,13,5,1) 22%, rgba(36,80,30,1) 29%, rg
                 label {
                     font-size: 1.3rem;
                 }
+
+                .matches{
+                    border:none
+                }
                 .paddle {
                     background: #0f9d18;
                     border-color: rgb(247, 196, 12);
@@ -216,7 +219,6 @@ background: linear-gradient(90deg, rgba(18,13,5,1) 22%, rgba(36,80,30,1) 29%, rg
                     font-family: 'Press Start 2P', cursive;
                     font-size: 4rem;
                     letter-spacing: 0.5rem;
-                    margin: 3rem; 
                     text-align: center;
                 }
             }
