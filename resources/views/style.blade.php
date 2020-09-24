@@ -25,7 +25,7 @@
                 background: linear-gradient(90deg, rgba(3,4,10,1) 23%, rgba(44,48,92,1) 86%);
                 color: #0f9d18;
                 font-family: 'Orbitron', sans-serif;
-                line-height: 2;
+                line-height: 1.5;
                 padding:1rem;
                 text-align: center;
             }
@@ -34,16 +34,7 @@
                 border:none;
             }
 
-            {{-- button {
-                background: #0f9d18;
-                border-color: rgb(247, 196, 12);
-                color: #FFFF;
-                font-family: 'Press Start 2P', cursive;
-                height:4rem;
-                width:4rem;
-            } --}}
-
-                        
+                  
             .button {
                 background: transparent; 
                 border: 2px solid #0f9d18;
@@ -53,6 +44,7 @@
                 margin:2rem;
                 width: fit-content;
 
+
             }
 
             .button:hover {
@@ -60,14 +52,19 @@
                 border: 3px solid #0f9d18;
                 color:#FFFF;
                 padding:2rem;
+                -webkit-box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
+-moz-box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
+box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
             }
 
 {{-- Clicked effect (moves down slightly) --}}
-            .button:active {
-                background: #0000;
-
+            .button:active, .button:hover{
+                background: black;
                 box-shadow: 0 3px rgb(13, 5, 83);
                 transform: translateY(8px);
+                -webkit-box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
+-moz-box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
+box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
             }
 
             .form-control{
@@ -88,17 +85,18 @@
             input[type=text] {
                 background: #0000; 
                 color:#FFFFFF;
-                font-family: 'Orbitron', sans-serif;	
-            }
-
-            input:active {
-                background:black;
-            }
-
-            label {
-                font-size:0.9rem;
+                font-family: 'Orbitron', sans-serif;
+                font-size:1rem;	
                 
             }
+
+            input:active, input:hover {
+                background:black;
+                -webkit-box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
+-moz-box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
+box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
+            }
+
 
             .list-group, p.list-group {
                 border: 2px solid #0f9d18;
@@ -126,9 +124,6 @@
                 text-align: center;
             }
 
-            .match{ 
-
-            }
 
             .player {
                 border: 3px solid #0f9d18;
@@ -140,13 +135,19 @@
             } 
 
             .versus {
-                
+                font-weight:bolder;
+            }
+
+            .versus:hover {
+                transform: translateY(8px);
+
             }
 
             @media only screen and (min-width: 450px) {
                 * {
-  box-sizing: border-box;
-}
+                box-sizing: border-box;
+                }
+
                 .ball {
                     background: #0f9d18;
                     display:relative;
@@ -158,9 +159,9 @@
                     color:#0f9d18;
                     display: flex;
                     justify-content: center;
-                    background: rgb(44,48,92);
-                    background: linear-gradient(90deg, rgba(44,48,92,1) 0%, rgba(3,4,10,1) 10%, rgba(5,2,2,1) 82%, rgba(29,60,42,1) 100%);
-                }
+                    background: rgb(18,13,5);
+background: linear-gradient(90deg, rgba(18,13,5,1) 22%, rgba(36,80,30,1) 29%, rgba(12,1,1,1) 39%, rgba(19,15,43,1) 79%, rgba(24,25,73,1) 97%);                }
+
 
                 button {
                     background: #0f9d18;
@@ -188,6 +189,19 @@
                     justify-content: space-around;
                 }
                 
+                input {
+                    margin:1rem;
+                    padding:1.2rem;
+                }
+                
+                input:active, input:hover {
+                    background:black;
+                    transform: translateY(5px);
+                }
+
+                label {
+                    font-size: 1.3rem;
+                }
                 .paddle {
                     background: #0f9d18;
                     border-color: rgb(247, 196, 12);
