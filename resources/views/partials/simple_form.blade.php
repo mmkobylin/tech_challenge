@@ -11,9 +11,9 @@
   Player2:<br>
   <input type="text" name="lastname"><br>
 
-        <div class="players-field">
+    <div class="players-field">
         <label>Player3: <input type="text" name="name3" value="<?php echo $name3;?>" required>
-      </div>
+    </div>
       <div class="players-field">
         <label>Player4: <input type="text" name="name4" value="<?php echo $name4;?>" required>
       </div>
@@ -39,5 +39,12 @@ collect(array_push($allPlayers, $Player1, $Player2, $Player3, $Player4));
 //this is where i shuffle and collect!
 $randomPlay = (collect($allPlayers)->shuffle()->all());
 
-print_r('MATCH 1 ' . ($randomPlay[0] . ' vs ' . $randomPlay[1]) . ' and MATCH 2 '. $randomPlay[2] . ' vs '. $randomPlay[3])?>
+print_r('MATCH 1:')?> <br> <?php
+print_r($randomPlay[0] . ' vs ' . $randomPlay[1]);?>
+<br>
+<?php
+print_r(' and '); ?> <br> <?php
+print_r('MATCH 2:')?><br>
+<?php
+print_r($randomPlay[2] . ' vs '. $randomPlay[3])?>
 </body>
