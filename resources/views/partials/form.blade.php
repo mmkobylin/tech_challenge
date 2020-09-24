@@ -11,25 +11,25 @@
 
             <div class="players-field">
                 <label>Player 1:</label><br>
-                <input type="text" id="name1" name="firstname" value="{{ old('name1') }}" required>
+                <input type="text" name="name1"  value="<?php echo $name1;?>" required>
             </div>
             
-            <div class="players-field">
-                <label>Player 3:</label><br>
-                <input type="text" id="name2" name="lastname" value="{{ old('name2') }}" required>
+         <div class="players-field">
+                <label>Player 2:</label><br>
+                <input type="text" name="name2" value="<?php echo $name2;?>" required>
             </div>
         </div>
 
         <div class="column">
 
             <div class="players-field">
-                <label>Player 2:</label><br>
-                <input type="text" id="name3" name="name3" value="{{ old('name3') }}" required>
+                <label>Player 3:</label><br>
+                <input type="text" name="name3" value="<?php echo $name3;?>" required>
             </div>
 
             <div class="players-field">
                 <label>Player 4:</label><br>
-                <input type="text" id="name4" name="name4" value="{{ old('name4') }}" required>
+                <input type="text" name="name4" value="<?php echo $name4;?>" required>
             </div>
         </div>       
         <button class="button" type="submit">Randomise?</button>
@@ -42,9 +42,9 @@
 $allPlayers = [];
 
 //declare variables that I get from GET method
-$Player1=$_GET['firstname'];
-$Player3=$_GET['lastname'];
-$Player2=$_GET['name3'];
+$Player1=$_GET['name1'];
+$Player2=$_GET['name2'];
+$Player3=$_GET['name3'];
 $Player4=$_GET['name4']; 
 
 //this is where i collect the variables
