@@ -10,12 +10,12 @@
         <div class="column">
 
             <div class="players-field">
-                <label>Player1:</label><br>
+                <label>Player 1:</label><br>
                 <input type="text" name="firstname" value="<?php echo $firstname;?>" required>
             </div>
             
             <div class="players-field">
-                <label>Player2:</label><br>
+                <label>Player 3:</label><br>
                 <input type="text" name="lastname" value="<?php echo $lastname;?>" required>
             </div>
         </div>
@@ -23,12 +23,12 @@
         <div class="column">
 
             <div class="players-field">
-                <label>Player3:</label><br>
+                <label>Player 2:</label><br>
                 <input type="text" name="name3" value="<?php echo $name3;?>" required>
             </div>
 
             <div class="players-field">
-                <label>Player4:</label><br>
+                <label>Player 4:</label><br>
                 <input type="text" name="name4" value="<?php echo $name4;?>" required>
             </div>
         </div>       
@@ -43,8 +43,8 @@ $allPlayers = [];
 
 //declare variables that I get from GET method
 $Player1=$_GET['firstname'];
-$Player2=$_GET['lastname'];
-$Player3=$_GET['name3'];
+$Player3=$_GET['lastname'];
+$Player2=$_GET['name3'];
 $Player4=$_GET['name4']; 
 
 //this is where i collect the variables

@@ -139,20 +139,11 @@
                 text-align:center;
             } 
 
-            {{-- .player {
-                border: 3px solid #0f9d18;
-                box-shadow: 0 3px rgb(13, 5, 83);
-                padding-left: 2rem;
-                padding-right: 2rem;
-                margin:0;
-                width: fit-content;
-                text-align:center;
-            } --}}
             .versus {
-
+                
             }
 
-            @media only screen and (min-width: 400px) {
+            @media only screen and (min-width: 450px) {
                 * {
   box-sizing: border-box;
 }
