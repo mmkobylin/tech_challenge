@@ -66,12 +66,11 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
     
             .column-results{
                 border: 5px double #0f9d18;
-                float: left;
-                    width: 45%;
-                    padding: 3rem;
-                    padding-top:0.5rem;
-                    margin:1rem;
+                padding:4.5rem;
+                padding-top:0.5rem;
+                margin:1rem;
             }
+
             header { 
                 display: flex;
                 justify-content: space-around;
@@ -175,16 +174,18 @@ background: linear-gradient(90deg, rgba(18,13,5,1) 22%, rgba(36,80,30,1) 29%, rg
                     float: left;
                     width: 45%;
                     padding: 1rem;
-                    margin:1rem;
+                }
+
+                .column-results{
+                    border: 5px double #0f9d18;
+                    float: left;
+                    width: 45%;
+                    padding: 4rem;
+                    padding-top:1rem;
                 }
 
                 .card-body, fieldset {
                     border:none;
-                }
-
-                header { 
-                    display: flex;
-                    justify-content: space-between;
                 }
                 
                 input {
