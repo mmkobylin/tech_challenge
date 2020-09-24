@@ -54,16 +54,16 @@ function test_input($data) {
     <fieldset class="card-body">
       @csrf
       <div class="players-field">
-        <label>Player 1:  <input type="text" name="name1" value="<?php echo $name1;?>" required>
+        <label>Player 1:</label>  <input type="text" name="name1" value="<?php echo $name1;?>" required>
       </div>
       <div class="players-field">
-        <label>Player2: <input type="text" name="name2" value="<?php echo $name2;?>" required>
+        <label>Player2:</label> <input type="text" name="name2" value="<?php echo $name2;?>" required>
       </div>
       <div class="players-field">
-        <label>Player3: <input type="text" name="name3" value="<?php echo $name3;?>" required>
+        <label>Player3:</label> <input type="text" name="name3" value="<?php echo $name3;?>" required>
       </div>
       <div class="players-field">
-        <label>Player4: <input type="text" name="name4" value="<?php echo $name4;?>" required>
+        <label>Player4:</label> <input type="text" name="name4" value="<?php echo $name4;?>" required>
       </div>
       <span class="error"><?php echo $nameError;?></span><br><br>
     </fieldset>

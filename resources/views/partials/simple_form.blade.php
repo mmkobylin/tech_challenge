@@ -4,22 +4,31 @@
 <html>
 <body>
 
-<form method="get">
-  Player1:<br>
-  <input type="text" name="firstname">
-  <br>
-  Player2:<br>
-  <input type="text" name="lastname"><br>
+<form class="form-control" method="GET" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+    <fieldset class="card-body">
+      @csrf
+        <div class="players-field">
+            <label>Player 1:</label>
+            <input type="text" name="firstname" value="<?php echo $firstname;?>" required>
+        </div>
+        
+        <div class="players-field">
+            <label>Player2:</label>
+            <input type="text" name="lastname" value="<?php echo $lastname;?>" required>
+        </div>
 
-    <div class="players-field">
-        <label>Player3: <input type="text" name="name3" value="<?php echo $name3;?>" required>
-    </div>
-      <div class="players-field">
-        <label>Player4: <input type="text" name="name4" value="<?php echo $name4;?>" required>
-      </div>
+        <div class="players-field">
+            <label>Player3:</label>
+            <input type="text" name="name3" value="<?php echo $name3;?>" required>
+        </div>
 
-
-  <button class="sbt-btn" type="submit">Randomise?</button>
+        <div class="players-field">
+            <label>Player4:</label>
+            <input type="text" name="name4" value="<?php echo $name4;?>" required>
+        </div>
+        
+        <button class="sbt-btn" type="submit">Randomise?</button>
+    </fieldset>
 </form>
 
 <?php
@@ -38,10 +47,13 @@ collect(array_push($allPlayers, $Player1, $Player2, $Player3, $Player4));
 
 //this is where i shuffle and collect!
 $randomPlay = (collect($allPlayers)->shuffle()->all());
+?>
+<br>
 
+<?php
 print_r('MATCH 1:')?> <br> 
 <?php
-print_r($randomPlay[0] . ' vs ' . $randomPlay[1]);?>
+print_r(($randomPlay[0] . ' vs ' . $randomPlay[1] === ' vs ') ? 'Please enter the names!' : ($randomPlay[0] . ' vs ' . $randomPlay[1]));?>
 <br>
 <?php
 print_r(' and '); ?> <br> 
