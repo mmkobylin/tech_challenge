@@ -136,15 +136,26 @@
                 padding-left: 2rem;
                 padding-right: 2rem;
                 margin:0;
+                text-align:center;
+            } 
+
+            {{-- .player {
+                border: 3px solid #0f9d18;
+                box-shadow: 0 3px rgb(13, 5, 83);
+                padding-left: 2rem;
+                padding-right: 2rem;
+                margin:0;
                 width: fit-content;
                 text-align:center;
-            }
+            } --}}
             .versus {
 
             }
 
-            @media only screen and (min-width: 360px) {
-
+            @media only screen and (min-width: 400px) {
+                * {
+  box-sizing: border-box;
+}
                 .ball {
                     background: #0f9d18;
                     display:relative;
@@ -167,6 +178,12 @@
                     font-family: 'Press Start 2P', cursive;
                     height:4rem;
                     width:4rem;
+                }
+
+                .column {
+                    float: left;
+                    width: 50%;
+                    padding: 2rem;
                 }
 
                 .card-body, fieldset {
