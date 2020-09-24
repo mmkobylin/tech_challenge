@@ -11,26 +11,32 @@
   Player2:<br>
   <input type="text" name="lastname"><br>
 
-  Player3:<br>
-  <input type="text" name="name3">
-  <br>
-  Player4:<br>
-  <input type="text" name="name4"><br>
+        <div class="players-field">
+        <label>Player3: <input type="text" name="name3" value="<?php echo $name3;?>" required>
+      </div>
+      <div class="players-field">
+        <label>Player4: <input type="text" name="name4" value="<?php echo $name4;?>" required>
+      </div>
+
 
   <button class="sbt-btn" type="submit">Randomise?</button>
 </form>
 
 <?php
-//Here is the php code to store the user input to the variable
 
+//declare an empty array for variables
 $allPlayers = [];
+
+//declare variables that I get from GET method
 $Player1=$_GET['firstname'];
 $Player2=$_GET['lastname'];
 $Player3=$_GET['name3'];
 $Player4=$_GET['name4']; 
+
 //this is where i collect the variables
 collect(array_push($allPlayers, $Player1, $Player2, $Player3, $Player4));
-//it is actually shuffling!
+
+//this is where i shuffle and collect!
 $randomPlay = (collect($allPlayers)->shuffle()->all());
 
 print_r('MATCH 1 ' . ($randomPlay[0] . ' vs ' . $randomPlay[1]) . ' and MATCH 2 '. $randomPlay[2] . ' vs '. $randomPlay[3])?>
