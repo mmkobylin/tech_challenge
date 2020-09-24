@@ -48,17 +48,17 @@ collect(array_push($allPlayers, $Player1, $Player2, $Player3, $Player4));
 //this is where i shuffle and collect!
 $randomPlay = (collect($allPlayers)->shuffle()->all());
 ?>
-<br>
+    <br>
+    <div>
+        <h3 class="match"><?php print_r(($randomPlay[0] !== NULL && $randomPlay[1] !== NULL ) ?  'MATCH 1 :' : NULL ) ?></h3>
+            <p class="player"><?php print_r($randomPlay[0]) ?></p>
+            <p class="versus"><?php print_r(($randomPlay[0] === NULL || $randomPlay[1] === NULL ) ?  'Please enter the names' : ' vs ') ?></p>
+            <p class="player"><?php print_r($randomPlay[1]) ?></p>
+        
 
-{{-- <?php
-print_r('MATCH 1:   ')?> <br>  --}}
-<h3><?php
-print_r(($randomPlay[0] . ' vs ' . $randomPlay[1] === ' vs ') ? 'Please enter the names' : ('MATCH 1: ' . $randomPlay[0] . ' vs ' . $randomPlay[1]));?>
-<br></h3>
-<?php
-print_r(' and '); ?> <br> 
-{{-- <?php
-print_r('MATCH 2:   ')?> --}}
-<h3><?php
-print_r(($randomPlay[2] . ' vs ' . $randomPlay[3] === ' vs ') ? "click 'Randomise' to play!" : ('MATCH 2: ' . $randomPlay[2] . ' vs ' . $randomPlay[3]));?>
+        <h3 class="match"><?php print_r(($randomPlay[2] !== NULL && $randomPlay[3] !== NULL ) ?  'MATCH 2 :' : NULL ) ?></h3>
+            <p class="player"><?php print_r($randomPlay[2]) ?></p>
+            <p class="versus"><?php print_r(($randomPlay[2] === NULL || $randomPlay[3] === NULL ) ?  "and click 'Randomise?' to play!" : ' vs ') ?></p>
+            <p class="player"><?php print_r($randomPlay[3]) ?></p>
+    </div>
 </body>
