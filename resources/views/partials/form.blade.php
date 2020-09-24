@@ -81,7 +81,7 @@ function test_input($data) {
         
         collect(array_push($allPlayers, $name1, $name2, $name3, $name4));
 
-        function randomise($allPlayers) { 
+        function randomise($allPlayers) { add
             $randomPlay = collect($allPlayers)->shuffle()->all();
               return $randomPlay[0] . " vs ". $randomPlay[1] . " Match 2: ". $randomPlay[2] . " vs " . $randomPlay[3];
         };
