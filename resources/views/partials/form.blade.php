@@ -53,7 +53,7 @@ collect(array_push($allPlayers, $Player1, $Player2, $Player3, $Player4));
 //this is where i shuffle and collect!
 $randomPlay = (collect($allPlayers)->shuffle()->all());
 ?>
-    <section class="column">
+    <section class="column-results">
     {{-- are players randomize and present? if so, we have a match --}}
         <h3 class="match"><?php print_r(($randomPlay[0] !== NULL && $randomPlay[1] !== NULL ) ?  'MATCH 1 :' : NULL ) ?></h3>
     {{-- this is where we display player - if it is NULL, it does not display anything --}}
@@ -74,7 +74,7 @@ $randomPlay = (collect($allPlayers)->shuffle()->all());
 
         </div>
     </section>
-    <section class="column">
+    <section class="column-results">
         <h3 class="match"><?php print_r(($randomPlay[2] !== NULL && $randomPlay[3] !== NULL ) ?  'MATCH 2 :' : NULL ) ?></h3>
             <div class="player">
                 <p><?php print_r($randomPlay[2]) ?></p>
