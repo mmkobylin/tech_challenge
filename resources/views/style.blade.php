@@ -70,7 +70,7 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
                 padding-top:0.5rem;
                 margin:1rem;
             }
-
+            
             header { 
                 display: flex;
                 justify-content: space-around;
