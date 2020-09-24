@@ -39,12 +39,14 @@ collect(array_push($allPlayers, $Player1, $Player2, $Player3, $Player4));
 //this is where i shuffle and collect!
 $randomPlay = (collect($allPlayers)->shuffle()->all());
 
-print_r('MATCH 1:')?> <br> <?php
+print_r('MATCH 1:')?> <br> 
+<?php
 print_r($randomPlay[0] . ' vs ' . $randomPlay[1]);?>
 <br>
 <?php
-print_r(' and '); ?> <br> <?php
-print_r('MATCH 2:')?><br>
+print_r(' and '); ?> <br> 
 <?php
-print_r($randomPlay[2] . ' vs '. $randomPlay[3])?>
+print_r('MATCH 2:')?>
+<h3><?php
+print_r($randomPlay[2] . ' vs '. $randomPlay[3])?><h3>
 </body>
