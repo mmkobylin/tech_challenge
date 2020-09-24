@@ -120,9 +120,6 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
             }
 
             .player { 
-                border: 3px solid #0f9d18;
-                padding-left: 2rem;
-                padding-right: 2rem;
                 margin:0;
                 text-align:center;     
                 display: flex;
@@ -143,9 +140,6 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
             }
 
             .player {
-                border: 3px solid #0f9d18;
-                padding-left: 2rem;
-                padding-right: 2rem;
                 margin:0;
                 text-align:center;
             } 
@@ -188,7 +182,7 @@ background: linear-gradient(90deg, rgba(18,13,5,1) 22%, rgba(36,80,30,1) 29%, rg
                     border: 5px double #0f9d18;
                     float: left;
                     width: 45%;
-                    padding: 4rem;
+                    padding: 2rem;
                     padding-top:1rem;
                 }
                 .card-body, fieldset {

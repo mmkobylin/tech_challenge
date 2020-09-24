@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+<h4> Please enter the players names and press 'Randomise?' ! </h4>
 <form class="form-control" method="GET" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
     <fieldset class="card-body">
       @csrf
@@ -53,19 +53,25 @@ collect(array_push($allPlayers, $Player1, $Player2, $Player3, $Player4));
 //this is where i shuffle and collect!
 $randomPlay = (collect($allPlayers)->shuffle()->all());
 ?>
-    <section class="column-results">
+{{-- this is where we hide the columns if we have no players --}}
+    <section class="column-results" <?php if ($randomPlay[3] == NULL){ ?> hidden <?php   } ?>>
+
+
     {{-- are players randomize and present? if so, we have a match --}}
         <h3 class="match"><?php print_r(($randomPlay[0] !== NULL && $randomPlay[1] !== NULL ) ?  'MATCH 1 :' : NULL ) ?></h3>
+    
     {{-- this is where we display player - if it is NULL, it does not display anything --}}
         <div class="player">
             <p><?php print_r($randomPlay[0]) ?></p>
+           
             {{-- this is where we are displaying the scores --}}
             <input type="number" id="score" name="score" placeholder="0" min="0" max="21"
-            {{-- this is where we disable the button if the input have not been submitted --}}
+           
+            {{-- this is where we hide the button if the input have not been submitted --}}
             <?php if ($randomPlay[1] == NULL){ ?> hidden <?php   } ?>>
         </div>
     {{-- if we dont have a match, we don't need versus --}}
-        <p class="versus"><?php print_r(($randomPlay[0] === NULL || $randomPlay[1] === NULL ) ?  'Please enter the names' : ' vs ') ?></p>
+        <p class="versus"><?php print_r(($randomPlay[0] === NULL || $randomPlay[1] === NULL ) ?  NULL : ' vs ') ?></p>
             <div class="player">
                 <p><?php print_r($randomPlay[1]) ?></p>
                 <input type="number" id="score" name="score" placeholder="0" min="0" max="21"
@@ -74,7 +80,7 @@ $randomPlay = (collect($allPlayers)->shuffle()->all());
 
         </div>
     </section>
-    <section class="column-results">
+    <section class="column-results" <?php if ($randomPlay[3] == NULL){ ?> hidden <?php   } ?>>
         <h3 class="match"><?php print_r(($randomPlay[2] !== NULL && $randomPlay[3] !== NULL ) ?  'MATCH 2 :' : NULL ) ?></h3>
             <div class="player">
                 <p><?php print_r($randomPlay[2]) ?></p>
@@ -82,7 +88,7 @@ $randomPlay = (collect($allPlayers)->shuffle()->all());
                 <?php if ($randomPlay[2] == NULL){ ?> hidden <?php   } ?>>
             </div>
             
-            <p class="versus"><?php print_r(($randomPlay[2] === NULL || $randomPlay[3] === NULL ) ?  " click 'Randomise?' to play!" : ' vs ') ?></p>
+            <p class="versus"><?php print_r(($randomPlay[2] === NULL || $randomPlay[3] === NULL ) ?  NULL : ' vs ') ?></p>
             
             <div class="player">
                 <p><?php print_r($randomPlay[3]) ?></p>
