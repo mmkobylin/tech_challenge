@@ -124,6 +124,22 @@
                 letter-spacing: 0.2rem;
                 padding:1.8rem;
                 text-align: center;
+            }
+
+            .match{ 
+
+            }
+
+            .player {
+                border: 3px solid #0f9d18;
+                box-shadow: 0 3px rgb(13, 5, 83);
+                padding-left: 2rem;
+                padding-right: 2rem;
+                margin:0;
+                width: fit-content;
+                text-align:center;
+            }
+            .versus {
 
             }
 
