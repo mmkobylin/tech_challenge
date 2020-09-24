@@ -1,115 +1,64 @@
-@extends('style')
+<?php error_reporting (E_ALL ^ E_NOTICE); ?>
 
-    
-    @section("title")
-    
-    @section("content")
+<!DOCTYPE html>
+<html>
+<body>
+
+<form class="form-control" method="GET" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+    <fieldset class="card-body">
+      @csrf
+        <div class="players-field">
+            <label>Player 1:</label>
+            <input type="text" name="firstname" value="<?php echo $firstname;?>" required>
+        </div>
+        
+        <div class="players-field">
+            <label>Player2:</label>
+            <input type="text" name="lastname" value="<?php echo $lastname;?>" required>
+        </div>
+
+        <div class="players-field">
+            <label>Player3:</label>
+            <input type="text" name="name3" value="<?php echo $name3;?>" required>
+        </div>
+
+        <div class="players-field">
+            <label>Player4:</label>
+            <input type="text" name="name4" value="<?php echo $name4;?>" required>
+        </div>
+        
+        <button class="sbt-btn" type="submit">Randomise?</button>
+    </fieldset>
+</form>
 
 <?php
-// define variables and set to empty values
-$nameError = "All fields are required!";
-$name1 = $name2 = $name3 = $name4 = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
-  if (empty($_GET["name1"])) {
-    $nameError;
-  } else {
-    $name1 = test_input($_GET["name1"]);
-  }
-}
+//declare an empty array for variables
+$allPlayers = [];
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
-  if (empty($_GET["name2"])) {
-    $nameError;
-  } else {
-    $name2 = test_input($_GET["name2"]);
-  }
-}
+//declare variables that I get from GET method
+$Player1=$_GET['firstname'];
+$Player2=$_GET['lastname'];
+$Player3=$_GET['name3'];
+$Player4=$_GET['name4']; 
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
-  if (empty($_GET["name3"])) {
-    $nameError;
-  } else {
-    $name3 = test_input($_GET["name3"]);
-  }
-}
+//this is where i collect the variables
+collect(array_push($allPlayers, $Player1, $Player2, $Player3, $Player4));
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
-  if (empty($_GET["name4"])) {
-    $nameError;
-  } else {
-    $name4 = test_input($_GET["name4"]);
-  }
-}
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
+//this is where i shuffle and collect!
+$randomPlay = (collect($allPlayers)->shuffle()->all());
 ?>
+<br>
 
-<form class="form-control" method="GET" autocomplete="off" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-    <fieldset class="card-body">
-    @csrf
-      
-      <div class="players-field">
-        <label>Player 1:</label>
-        <input type="text" name="name1" value="" required>
-      </div>
-
-      <div class="players-field">
-        <label>Player2:</label>
-        <input type="text" name="name2" value="" required>
-      </div>
-
-      <div class="players-field">
-        <label>Player3:</label>
-        <input type="text" name="name3" value="" required>
-      </div>
-
-      <div class="players-field">
-        <label>Player4:</label>
-        <input type="text" name="name4" value="" required>
-      </div>
-
-    <div>
-      <span class="error"><?php echo $nameError;?></span><br>
-      <input class="sub-btn" type="submit" name="submit" value="Randomize?"> 
-    </div>
-    
-  </fieldset>
-</form> 
- 
-</form>
-</div> 
-<section>
-  <h3>Matches:</h4>
-<div class="list-group"> 
-    <?php
-      // this is where we declare an empty array where we will put player's names.
-        $allPlayers = [];
-        $randomPlay= [];
-        collect(array_push($allPlayers, $name1, $name2, $name3, $name4));
-
-        function randomise($allPlayers) {
-            $randomPlay = collect($allPlayers)->shuffle()->all();
-              return $randomPlay[0] . " vs ". $randomPlay[1] ." Match 2: ". $randomPlay[2] . " vs " . $randomPlay[3];
-        };
-
-      
-
-    //this is where we checking if the players are entered
-    print_r((randomise($allPlayers) === " vs " . " Match 2: ". " vs ") ?
-        "Please enter names!" : "Match 1: " . randomise($allPlayers) //it does not want the ; HERE!!
-    );
-
-    ?>
-</section>
-
+{{-- <?php
+print_r('MATCH 1:')?> <br>  --}}
+<h3><?php
+print_r(($randomPlay[0] . ' vs ' . $randomPlay[1] === ' vs ') ? 'Please enter the names' : ('MATCH 1:' . $randomPlay[0] . ' vs ' . $randomPlay[1]));?>
+<br></h3>
+<?php
+print_r(' and '); ?> <br> 
+{{-- <?php
+print_r('MATCH 2:')?> --}}
+<h3><?php
+print_r(($randomPlay[2] . ' vs ' . $randomPlay[3] === ' vs ') ? "click 'Randomise' to play!" : ('MATCH 2:' . $randomPlay[1] . ' vs ' . $randomPlay[2]));?>
 </body>
-</html>
-
-
-    @endsection
