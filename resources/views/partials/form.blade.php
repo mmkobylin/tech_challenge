@@ -62,14 +62,14 @@ $randomPlay = (collect($allPlayers)->shuffle()->all());
             {{-- this is where we are displaying the scores --}}
             <input type="number" id="score" name="score" placeholder="0" min="0" max="21"
             {{-- this is where we disable the button if the input have not been submitted --}}
-            <?php if ($randomPlay[1] == NULL){ ?> disabled <?php   } ?>>
+            <?php if ($randomPlay[1] == NULL){ ?> hidden <?php   } ?>>
         </div>
     {{-- if we dont have a match, we don't need versus --}}
         <p class="versus"><?php print_r(($randomPlay[0] === NULL || $randomPlay[1] === NULL ) ?  'Please enter the names' : ' vs ') ?></p>
             <div class="player">
                 <p><?php print_r($randomPlay[1]) ?></p>
                 <input type="number" id="score" name="score" placeholder="0" min="0" max="21"
-                <?php if ($randomPlay[1] == NULL){ ?> disabled <?php   } ?>>
+                <?php if ($randomPlay[1] == NULL){ ?> hidden <?php   } ?>>
             </div>
 
         </div>
@@ -79,7 +79,7 @@ $randomPlay = (collect($allPlayers)->shuffle()->all());
             <div class="player">
                 <p><?php print_r($randomPlay[2]) ?></p>
                 <input type="number" id="score" name="score" placeholder="0" min="0" max="21"
-                <?php if ($randomPlay[2] == NULL){ ?> disabled <?php   } ?>>
+                <?php if ($randomPlay[2] == NULL){ ?> hidden <?php   } ?>>
             </div>
             
             <p class="versus"><?php print_r(($randomPlay[2] === NULL || $randomPlay[3] === NULL ) ?  " click 'Randomise?' to play!" : ' vs ') ?></p>
@@ -87,7 +87,7 @@ $randomPlay = (collect($allPlayers)->shuffle()->all());
             <div class="player">
                 <p><?php print_r($randomPlay[3]) ?></p>
                 <input class="score" type="number" id="score" name="score" placeholder="0" min="0" max="21"
-                <?php if ($randomPlay[3] == NULL){ ?> disabled <?php   } ?>>
+                <?php if ($randomPlay[3] == NULL){ ?> hidden <?php   } ?>>
                  
             </div>
     </section>
