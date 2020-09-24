@@ -64,6 +64,14 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
 box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
             }
     
+            .column-results{
+                border: 5px double #0f9d18;
+                float: left;
+                    width: 45%;
+                    padding: 3rem;
+                    padding-top:0.5rem;
+                    margin:1rem;
+            }
             header { 
                 display: flex;
                 justify-content: space-around;
@@ -97,14 +105,6 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
 
             }
 
-            .matches {
-                border: 5px double #0f9d18;
-                box-shadow: 0 3px rgb(13, 5, 83);
-                padding-bottom:2rem;
-                padding-left: 2rem;
-                padding-right: 2rem;
-            }
-
             .paddle {
                 background: #0f9d18;
                 border-color: rgb(247, 196, 12);
@@ -125,7 +125,6 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
 
             .player {
                 border: 3px solid #0f9d18;
-                box-shadow: 0 3px rgb(13, 5, 83);
                 padding-left: 2rem;
                 padding-right: 2rem;
                 margin:0;
