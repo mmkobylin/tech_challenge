@@ -33,7 +33,9 @@ I have decided to implement PHP for the project, because I felt I had best under
 
 I decided to stylize the ping pong for an old fashion arcade game Pong. Yet instead of going to a black and white theme, I decided to go with a black, white and green. The website will still be readable, but looking more modern, and more engaging for the eye of the user. 
 
-I decided to design the mobile version first to make it load faster on smaller devices. Then I will design the desktop one, using media queries.
+After some consideration I decided to add some more or the background, box shadow effects and transform effects, making the site more readable and accessible. I also tried to make the background look like an old fashion monitor background would look like.
+
+I decided to design the mobile version first to make it load faster on smaller devices. Then I designed the desktop one, using media queries.
  
 
 ## Style: 
