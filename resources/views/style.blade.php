@@ -183,7 +183,7 @@
                 .column {
                     float: left;
                     width: 50%;
-                    padding: 2rem;
+                    padding: 1rem;
                 }
 
                 .card-body, fieldset {

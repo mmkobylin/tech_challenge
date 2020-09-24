@@ -58,7 +58,7 @@ $randomPlay = (collect($allPlayers)->shuffle()->all());
     <div class="column">
         <h3 class="match"><?php print_r(($randomPlay[2] !== NULL && $randomPlay[3] !== NULL ) ?  'MATCH 2 :' : NULL ) ?></h3>
             <p class="player"><?php print_r($randomPlay[2]) ?></p>
-            <p class="versus"><?php print_r(($randomPlay[2] === NULL || $randomPlay[3] === NULL ) ?  "and click 'Randomise?' to play!" : ' vs ') ?></p>
+            <p class="versus"><?php print_r(($randomPlay[2] === NULL || $randomPlay[3] === NULL ) ?  " click 'Randomise?' to play!" : ' vs ') ?></p>
             <p class="player"><?php print_r($randomPlay[3]) ?></p>
     </div>
 </body>
