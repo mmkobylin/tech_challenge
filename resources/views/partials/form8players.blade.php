@@ -101,7 +101,7 @@
                     <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
                 </div>
 
-                <p class="versus">vs</p>
+                <p>vs</p>
 
                 <div class="player">
                     <p><?php print_r($randomPlay[1]) ?></p>
@@ -118,7 +118,7 @@
                     <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
                 </div>
 
-                <p class="versus">vs</p>
+                <p>vs</p>
 
                 <div class="player">
                     <p><?php print_r($randomPlay[3]) ?></p>
@@ -139,7 +139,7 @@
                     <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
                 </div>
 
-                <p class="versus">vs</p>
+                <p>vs</p>
 
                 <div class="player">
                     <p><?php print_r($randomPlay[5]) ?></p>
@@ -156,7 +156,7 @@
                     <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
                 </div>
 
-                <p class="versus">vs</p>
+                <p>vs</p>
 
                 <div class="player">
                     <p><?php print_r($randomPlay[7]) ?></p>

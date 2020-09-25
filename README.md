@@ -31,9 +31,7 @@ I decided to design the mobile version first to make it load faster on smaller d
 
 ## Style
 
-Currently all the components and it's features are in alphabetical order in the style.blade.php. 
-
-Because the simplicity of the traditional arcade games, there was only so much I could write without loosing the clarity of the idea. 
+All the components and it's features are in alphabetical order in the style.blade.php. 
 
 ## Routing
 
@@ -41,7 +39,10 @@ As each field is mandatory, I decided it is for the best to make user choose how
 
 When user is clicking on the number, it is taking them to the screen where they could fill in the names. If they change their mind, they might simply click 'Try again?!' button. 
 
+## Original Wireframing
 
+I am attaching an original wireframing in the resources/wireframing folder. 
+Some minor stylistic choices had been caused either by taking into an account an overall accessibility of the page, or nature of used programming language.
 
 ## License
 

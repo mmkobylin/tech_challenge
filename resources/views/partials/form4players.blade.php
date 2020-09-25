@@ -17,9 +17,10 @@
 
     //attempt to make each name unique
     //this is where i am checking if all the names are unique
-   {{-- count($randomPlay) !== count(array_unique($randomPlay)) ?
-    "Each player needs an unique name!" : NULL;  --}}
-
+    function unique($randomPlay){
+   count($randomPlay) !== count(array_unique($randomPlay)) ?
+    "Each player needs an unique name!" : NULL; 
+    }
 ?>
 
 <!DOCTYPE html>
@@ -63,7 +64,8 @@
 
                     </section>   
                     {{-- pressing this button collects the data --}}
-                    <button class="button" type="submit">Randomise?</button>
+                    <button class="button" type="submit" 
+                    <?php count($randomPlay) !== count(array_unique($randomPlay)) ? "Each player needs an unique name!" : NULL ?>>Randomise?</button>
                 </fieldset>
             </form>
 
@@ -82,7 +84,7 @@
                         <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
                     </div>
 
-                    <p class="versus">vs</p>
+                    <p>vs</p>
 
                     <div class="player">
                         <p><?php print_r($randomPlay[1]) ?></p>
@@ -104,7 +106,7 @@
                         <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
                     </div>
 
-                    <p class="versus">vs</p>
+                    <p>vs</p>
 
                     <div class="player">
                         <p><?php print_r($randomPlay[3]) ?></p>
