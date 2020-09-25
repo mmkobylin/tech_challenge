@@ -20,84 +20,90 @@
 <html> 
 {{-- indentation - body is a child of html --}}
     <body>
-        <h2> Please enter the players names and press 'Randomise?' ! </h2>
-        {{-- this is where I start the form with GET method --}}
-        <form class="form-control" method="GET" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-            {{-- using fieldset for group of related elements in the form  --}}
-            <fieldset class="card-body">
-            {{-- Cross-Site Request Forgery Token --}}
-                @csrf
-                {{-- creating first column, they have to be in separate sections --}}
-                <section class="column">
-                {{-- this is  where we collect the player's names--}}
-                    <div class="players-field">
-                        <label>Player 1:</label><br>
-                        <input type="text" name="name1" value="<?php echo $name1;?>" required>
-                    </div>
-                    
-                    <div class="players-field">
-                        <label>Player 2:</label><br>
-                        <input type="text" name="name2" value="<?php echo $name2;?>" required>
-                    </div>
-                </section>
+        <main>
+            <h2> Please enter the players names and press 'Randomise?' ! </h2>
+            {{-- this is where I start the form with GET method 
+            this is also where we hide the form when it is submitted--}}
+            <form class="form-control" method="GET" <?php if ($randomPlay[3] !== NULL){ ?> hidden <?php } ?> action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+                {{-- using fieldset for group of related elements in the form  --}}
+                <fieldset class="card-body">
+                {{-- Cross-Site Request Forgery Token --}}
+                    @csrf
+                    {{-- creating first column, they have to be in separate sections --}}
+                    <section class="column">
+                    {{-- this is  where we collect the player's names--}}
+                        <div class="players-field">
+                            <label>Player 1:</label><br>
+                            <input type="text" name="name1" value="<?php echo $name1;?>" required>
+                        </div>
+                        
+                        <div class="players-field">
+                            <label>Player 2:</label><br>
+                            <input type="text" name="name2" value="<?php echo $name2;?>" required>
+                        </div>
+                    </section>
 
-                <section class="column">
+                    <section class="column">
 
-                    <div class="players-field">
-                        <label>Player 3:</label><br>
-                        <input type="text" name="name3" value="<?php echo $name3;?>" required>
-                    </div>
+                        <div class="players-field">
+                            <label>Player 3:</label><br>
+                            <input type="text" name="name3" value="<?php echo $name3;?>" required>
+                        </div>
 
-                    <div class="players-field">
-                        <label>Player 4:</label><br>
-                        <input type="text" name="name4" value="<?php echo $name4;?>" required>
-                    </div>
+                        <div class="players-field">
+                            <label>Player 4:</label><br>
+                            <input type="text" name="name4" value="<?php echo $name4;?>" required>
+                        </div>
 
-                </section>   
-                {{-- pressing this button collects the data --}}
-                <button class="button" type="submit">Randomise?</button>
-            </fieldset>
-        </form>
+                    </section>   
+                    {{-- pressing this button collects the data --}}
+                    <button class="button" type="submit">Randomise?</button>
+                </fieldset>
+            </form>
 
-        {{-- this is where we hide the columns if we have no players --}}
-        <section class="column-results" <?php if ($randomPlay[3] == NULL){ ?> hidden <?php   } ?>>
+            {{-- this is where we hide the columns if we have no players --}}
+            <section class="column-results" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>>
 
-        {{-- are players randomize and present? if so, we have a match --}}
-            <h3 class="match">MATCH 1 :</h3>
-            <div class="player">
-                {{-- this is where we display player - if it is NULL, it does not display anything --}}
-                <p><?php print_r($randomPlay[0]) ?></p>
-            
-                {{-- this is where we are displaying the scores --}}
-                <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
-            </div>
+            {{-- are players randomize and present? if so, we have a match --}}
+                <h3 class="match">MATCH 1 :</h3>
+                <div class="player">
+                    {{-- this is where we display player - if it is NULL, it does not display anything --}}
+                    <p><?php print_r($randomPlay[0]) ?></p>
+                
+                    {{-- this is where we are displaying the scores --}}
+                    <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
+                </div>
 
-            <p class="versus">vs</p>
+                <p class="versus">vs</p>
 
-            <div class="player">
-                <p><?php print_r($randomPlay[1]) ?></p>
-                <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
-            </div>
-        </section>
+                <div class="player">
+                    <p><?php print_r($randomPlay[1]) ?></p>
+                    <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
+                </div>
+            </section>
 
-        <section class="column-results" <?php if ($randomPlay[3] == NULL){ ?> hidden <?php   } ?>>
+            <section class="column-results" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php   } ?>>
 
-            <h3 class="match">MATCH 2 :</h3>
-            <div class="player">
-                {{-- this is where we display player - if it is NULL, it does not display anything --}}
-                <p><?php print_r($randomPlay[2]) ?></p>
-            
-                {{-- this is where we are displaying the scores --}}
-                <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
-            </div>
+                <h3 class="match">MATCH 2 :</h3>
+                <div class="player">
+                    {{-- this is where we display player - if it is NULL, it does not display anything --}}
+                    <p><?php print_r($randomPlay[2]) ?></p>
+                
+                    {{-- this is where we are displaying the scores --}}
+                    <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
+                </div>
 
-            <p class="versus">vs</p>
+                <p class="versus">vs</p>
 
-            <div class="player">
-                <p><?php print_r($randomPlay[3]) ?></p>
-                <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
-            </div>
+                <div class="player">
+                    <p><?php print_r($randomPlay[3]) ?></p>
+                    <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
+                </div>
 
-        </section>
+            </section>
+            <nav>
+                <h4> <a class="navbar-brand" href="/" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>>PLAY AGAIN?!</a></h4>
+            </nav>
+        <main>
     </body>
 </html>
