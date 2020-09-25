@@ -14,8 +14,8 @@
 
         <style>
             body {
-                background: rgb(3,4,10);
-                background: linear-gradient(90deg, rgba(3,4,10,1) 23%, rgba(44,48,92,1) 86%);
+                background: rgb(18,13,5);
+                background: linear-gradient(90deg, rgba(18,13,5,1) 22%, rgba(36,80,30,1) 29%, rgba(12,1,1,1) 39%, rgba(19,15,43,1) 79%, rgba(24,25,73,1) 97%);                
                 color: #0f9d18;
                 font-family: 'Orbitron', sans-serif;
                 line-height: 1.5;
@@ -178,6 +178,13 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
          
         @media only screen and (min-width: 450px) {
             
+            
+            a {
+                box-sizing:border-box;
+                float: center;
+                width: 100%;
+            }
+            
             .column {
                 box-sizing:border-box;
                 float: left;
@@ -190,10 +197,18 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
                 width: 33.3%;
             }
 
-            a {
-                box-sizing:border-box;
-                float: center;
-                width: 100%;
+            input {
+                margin:1rem;
+                padding:1.2rem;
+            }
+            
+            input:active, input:hover {
+                background:black;
+                transform: translateY(-5px);
+            }
+
+            label {
+                font-size: 1.3rem;
             }
         
         }
