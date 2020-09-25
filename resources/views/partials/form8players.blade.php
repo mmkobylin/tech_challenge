@@ -91,7 +91,8 @@
             <section class="column-results" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>>
 
             {{-- are players randomize and present? if so, we have a match --}}
-                <h3 class="match">MATCH 1 :</h3>
+                <div class="match">
+                <h3>MATCH 1 :</h3>
                 <div class="player">
                     {{-- this is where we display player - if it is NULL, it does not display anything --}}
                     <p><?php print_r($randomPlay[0]) ?></p>
@@ -106,8 +107,9 @@
                     <p><?php print_r($randomPlay[1]) ?></p>
                     <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
                 </div>
-
-                <h3 class="match">MATCH 2 :</h3>
+    </div>
+                <div class="match">
+                <h3>MATCH 2 :</h3>
                 <div class="player">
                     {{-- this is where we display player - if it is NULL, it does not display anything --}}
                     <p><?php print_r($randomPlay[2]) ?></p>
@@ -126,8 +128,9 @@
             </section>
 
             <section class="column-results" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php   } ?>>    
-
-                <h3 class="match">MATCH 3 :</h3>
+    </div>
+                <div class="match">
+                <h3>MATCH 3 :</h3>
                 <div class="player">
                     {{-- this is where we display player - if it is NULL, it does not display anything --}}
                     <p><?php print_r($randomPlay[4]) ?></p>
@@ -142,8 +145,9 @@
                     <p><?php print_r($randomPlay[5]) ?></p>
                     <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
                 </div>
-            
-                <h3 class="match">MATCH 4 :</h3>
+                </div>
+                <div class="match">
+                <h3>MATCH 4 :</h3>
                 <div class="player">
                     {{-- this is where we display player - if it is NULL, it does not display anything --}}
                     <p><?php print_r($randomPlay[6]) ?></p>

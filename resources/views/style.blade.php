@@ -54,7 +54,6 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
             }
 
             .column-results{
-                border: 5px double #0f9d18;
                 padding:4.5rem;
                 padding-top:0.5rem;
                 margin:1rem;
@@ -109,6 +108,12 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
                 padding:2rem;
             }
 
+            .match {
+                border: 5px double #0f9d18;
+                padding:3rem;
+                margin:0.5rem;
+            }
+            
             .paddle {
                 background: #0f9d18;
                 border-color: rgb(247, 196, 12);
@@ -133,10 +138,6 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
                 letter-spacing: 0.2rem;
                 padding:1.8rem;
                 text-align: center;
-            }
-
-            .match{ 
-
             }
 
             .player {
@@ -179,7 +180,6 @@ background: linear-gradient(90deg, rgba(18,13,5,1) 22%, rgba(36,80,30,1) 29%, rg
                     padding: 1rem;
                 }
                 .column-results{
-                    border: 5px double #0f9d18;
                     float: left;
                     width: 45%;
                     padding: 2rem;

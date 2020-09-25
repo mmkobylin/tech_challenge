@@ -80,7 +80,8 @@
             <section class="column-results" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>>
 
             {{-- are players randomize and present? if so, we have a match --}}
-                <h3 class="match">MATCH 1 :</h3>
+                <div class="match">
+                    <h3>MATCH 1 :</h3>
                 <div class="player">
                     {{-- this is where we display player - if it is NULL, it does not display anything --}}
                     <p><?php print_r($randomPlay[0]) ?></p>
@@ -96,35 +97,37 @@
                     <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
                 </div>
 
-                <h3 class="match">MATCH 2 :</h3>
-                <div class="player">
-                    {{-- this is where we display player - if it is NULL, it does not display anything --}}
-                    <p><?php print_r($randomPlay[2]) ?></p>
-                
-                    {{-- this is where we are displaying the scores --}}
-                    <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
+                <div class="match">
+                    <h3>MATCH 2 :</h3>
+                    <div class="player">
+                        {{-- this is where we display player - if it is NULL, it does not display anything --}}
+                        <p><?php print_r($randomPlay[2]) ?></p>
+                    
+                        {{-- this is where we are displaying the scores --}}
+                        <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
+                    </div>
+
+                    <p class="versus">vs</p>
+
+                    <div class="player">
+                        <p><?php print_r($randomPlay[3]) ?></p>
+                        <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
+                    </div>
                 </div>
-
-                <p class="versus">vs</p>
-
-                <div class="player">
-                    <p><?php print_r($randomPlay[3]) ?></p>
-                    <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
-                </div>
-
             </section>
 
-            <section class="column-results" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php   } ?>>    
+            <section class="column-results" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>>    
 
-                <h3 class="match">MATCH 3 :</h3>
-                <div class="player">
-                    {{-- this is where we display player - if it is NULL, it does not display anything --}}
-                    <p><?php print_r($randomPlay[4]) ?></p>
-                
-                    {{-- this is where we are displaying the scores --}}
-                    <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
+                <div class="match">
+                    <h3>MATCH 3 :</h3>
+                    <div class="player">
+                        {{-- this is where we display player - if it is NULL, it does not display anything --}}
+                        <p><?php print_r($randomPlay[4]) ?></p>
+                    
+                        {{-- this is where we are displaying the scores --}}
+                        <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
+                    </div>
                 </div>
-
                 <p class="versus">vs</p>
 
                 <div class="player">
