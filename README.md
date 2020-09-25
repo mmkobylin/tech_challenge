@@ -35,7 +35,13 @@ Currently all the components and it's features are in alphabetical order in the 
 
 Because the simplicity of the traditional arcade games, there was only so much I could write without loosing the clarity of the idea. 
 
-## 
+## Routing
+
+As each field is mandatory, I decided it is for the best to make user choose how many players do they want to include. It currently gives them option of 4, 6, and 8. 
+
+When user is clicking on the number, it is taking them to the screen where they could fill in the names. If they change their mind, they might simply click 'Try again?!' button. 
+
+
 
 ## License
 
