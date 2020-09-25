@@ -23,7 +23,9 @@
         <main>
             {{-- this is where I start the form with GET method 
             this is also where we hide the form when it is submitted--}}
-            <form class="form-control" method="GET" <?php if ($randomPlay[3] !== NULL){ ?> hidden <?php } ?> action="four_game">  
+            <form class="form-control" method="GET" <?php if ($randomPlay[3] !== NULL)
+            { ?> hidden <?php } ?> 
+            action="four_game"> 
                 {{-- using fieldset for group of related elements in the form  --}}
                 <fieldset class="card-body">
                 {{-- Cross-Site Request Forgery Token --}}
@@ -61,7 +63,7 @@
             </form>
 
             {{-- this is where we hide the columns if we have no players --}}
-            <section class="column-results" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>>
+            <section class="column-results" <?php if ($randomPlay[2] === NULL){ ?> hidden <?php } ?>>
 
             {{-- are players randomize and present? if so, we have a match --}}
                 <h3 class="match">MATCH 1 :</h3>

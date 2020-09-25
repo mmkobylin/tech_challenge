@@ -27,7 +27,8 @@
         <main>
             {{-- this is where I start the form with GET method 
             this is also where we hide the form when it is submitted--}}
-            <form class="form-control" method="GET" <?php if ($randomPlay[3] !== NULL){ ?> hidden <?php } ?> 
+            <form class="form-control" method="GET" <?php if ($randomPlay[3] !== NULL)
+            { ?> hidden <?php } ?> 
             action="eight_game">  
                 {{-- using fieldset for group of related elements in the form  --}}
                 <fieldset class="card-body">
