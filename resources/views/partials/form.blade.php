@@ -41,9 +41,6 @@
                             <label>Player 2:</label><br>
                             <input type="text" name="name2" value="<?php echo $name2;?>" required>
                         </div>
-                    </section>
-
-                    <section class="column">
 
                         <div class="players-field">
                             <label>Player 3:</label><br>
@@ -53,6 +50,30 @@
                         <div class="players-field">
                             <label>Player 4:</label><br>
                             <input type="text" name="name4" value="<?php echo $name4;?>" required>
+                        </div>
+
+                    </section>
+
+                    <section class="column">
+
+                        <div class="players-field">
+                            <label>Player 5:</label><br>
+                            <input type="text" name="name5" value="<?php echo $name5;?>" required>
+                        </div>
+
+                        <div class="players-field">
+                            <label>Player 6:</label><br>
+                            <input type="text" name="name6" value="<?php echo $name6;?>" required>
+                        </div>
+
+                        <div class="players-field">
+                            <label>Player 7:</label><br>
+                            <input type="text" name="name7" value="<?php echo $name7;?>" required>
+                        </div>
+
+                        <div class="players-field">
+                            <label>Player 8:</label><br>
+                            <input type="text" name="name8" value="<?php echo $name8;?>" required>
                         </div>
 
                     </section>   
@@ -80,11 +101,8 @@
                     <p><?php print_r($randomPlay[1]) ?></p>
                     <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
                 </div>
-            </section>
 
-            <section class="column-results" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php   } ?>>
-
-                <h3 class="match">MATCH 2 :</h3>
+                <h3 class="match">MATCH 3 :</h3>
                 <div class="player">
                     {{-- this is where we display player - if it is NULL, it does not display anything --}}
                     <p><?php print_r($randomPlay[2]) ?></p>
@@ -101,6 +119,43 @@
                 </div>
 
             </section>
+
+            <section class="column-results" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php   } ?>>    
+
+                <h3 class="match">MATCH 2 :</h3>
+                <div class="player">
+                    {{-- this is where we display player - if it is NULL, it does not display anything --}}
+                    <p><?php print_r($randomPlay[4]) ?></p>
+                
+                    {{-- this is where we are displaying the scores --}}
+                    <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
+                </div>
+
+                <p class="versus">vs</p>
+
+                <div class="player">
+                    <p><?php print_r($randomPlay[5]) ?></p>
+                    <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
+                </div>
+            
+                <h3 class="match">MATCH 4 :</h3>
+                <div class="player">
+                    {{-- this is where we display player - if it is NULL, it does not display anything --}}
+                    <p><?php print_r($randomPlay[6]) ?></p>
+                
+                    {{-- this is where we are displaying the scores --}}
+                    <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
+                </div>
+
+                <p class="versus">vs</p>
+
+                <div class="player">
+                    <p><?php print_r($randomPlay[7]) ?></p>
+                    <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
+                </div>
+
+            </section>
+
             <nav>
                 <h4> <a class="navbar-brand" href="/" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>>PLAY AGAIN?!</a></h4>
             </nav>

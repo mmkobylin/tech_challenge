@@ -25,7 +25,7 @@
 {{-- indentation - body is a child of html --}}
     <body>
         <main>
-            <h2> Please enter the players names and press 'Randomise?' ! </h2>
+            <h2 <?php if ($randomPlay[3] !== NULL){ ?> hidden <?php } ?>> Please enter the players names and press 'Randomise?' ! </h2>
             {{-- this is where I start the form with GET method 
             this is also where we hide the form when it is submitted--}}
             <form class="form-control" method="GET" <?php if ($randomPlay[3] !== NULL){ ?> hidden <?php } ?> action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
