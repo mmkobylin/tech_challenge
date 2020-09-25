@@ -88,7 +88,7 @@
             </form>
 
             {{-- this is where we hide the columns if we have no players --}}
-            <section class="column-results" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>>
+            <section class="column" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>>
 
             {{-- are players randomize and present? if so, we have a match --}}
                 <div class="match">
@@ -127,7 +127,7 @@
 
             </section>
 
-            <section class="column-results" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php   } ?>>    
+            <section class="column" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php   } ?>>    
     </div>
                 <div class="match">
                 <h3>MATCH 3 :</h3>

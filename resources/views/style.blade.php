@@ -142,7 +142,7 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
             .numbers, a {
                 color:#FFFF;
                 display: flex;
-                justify-content:space-between;
+                justify-content:space-evenly;
                 font-family: 'Press Start 2P', cursive;
                 font-size:3rem;
                 padding:3rem;
@@ -234,18 +234,14 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
     </head>
      <body>
         <header>
-            <div class="container">
-
-            </div>
+            @yield("title")
         </header>
         
-        <main class="content">
+        <main>
             @yield("title")
             @yield("content")
         </main>
 
-       <div class="container">
-            {{-- @include("partials/button") --}}
         </div>
     </body>
 </html>

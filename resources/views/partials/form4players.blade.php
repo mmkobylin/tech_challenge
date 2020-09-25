@@ -38,6 +38,7 @@
                         </div>
                         
                         <div class="players-field">
+                            <br>
                             <label>Player 2:</label><br>
                             <input type="text" name="name2" value="<?php echo $name2;?>" required>
                         </div>
@@ -50,7 +51,7 @@
                             <input type="text" name="name3" value="<?php echo $name3;?>" required>
                         </div>
 
-                        <div class="players-field">
+                        <div class="players-field"><br>
                             <label>Player 4:</label><br>
                             <input type="text" name="name4" value="<?php echo $name4;?>" required>
                         </div>
@@ -62,7 +63,7 @@
             </form>
 
             {{-- this is where we hide the columns if we have no players --}}
-            <section class="column-results" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>> 
+            <section class="column-match" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>> 
 
             {{-- are players randomize and present? if so, we have a match --}}
                 <div class="match">
@@ -85,7 +86,7 @@
                 </div>
             </section>
 
-            <section class="column-results" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>> 
+            <section class="column-match" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>> 
 
                 <div class="match">
 
