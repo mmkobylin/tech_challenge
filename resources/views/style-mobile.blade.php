@@ -183,6 +183,18 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
                 float: left;
                 width: 50%;
             }
+
+            .column-match3 {
+                box-sizing:border-box;
+                float: left;
+                width: 33.3%;
+            }
+
+            a {
+                box-sizing:border-box;
+                float: center;
+                width: 100%;
+            }
         
         }
         </style>
