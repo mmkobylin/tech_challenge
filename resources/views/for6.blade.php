@@ -7,6 +7,6 @@
 
 @section("content")
    
-    @include("partials/form8players")
+   @include("partials/form6players")
    
 @endsection

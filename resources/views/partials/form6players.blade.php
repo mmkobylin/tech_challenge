@@ -11,9 +11,8 @@
     $Player5=$_GET['name5'];
     $Player6=$_GET['name6'];
     
-
     //this is where i collect the variables
-    collect(array_push($allPlayers6, $Player1, $Player2, $Player3, $Player4, $Player5, $Player6, $Player7, $Player8));
+    collect(array_push($allPlayers6, $Player1, $Player2, $Player3, $Player4, $Player5, $Player6));
 
     //this is where i shuffle and collect!
     $randomPlay = (collect($allPlayers6)->shuffle()->all());
@@ -28,7 +27,7 @@
             this is also where we hide the form when it is submitted--}}
             <form class="form-control" method="GET" <?php if ($randomPlay[3] !== NULL)
             { ?> hidden <?php } ?> 
-            action="eight_game">  
+            action="six_game">  
                 {{-- using fieldset for group of related elements in the form  --}}
                 <fieldset class="card-body">
                 {{-- Cross-Site Request Forgery Token --}}
@@ -51,14 +50,15 @@
                             <input type="text" name="name3" value="<?php echo $name3;?>" required>
                         </div>
 
+                    </section>
+
+                    <section class="column">
+
+                        
                         <div class="players-field">
                             <label>Player 4:</label><br>
                             <input type="text" name="name4" value="<?php echo $name4;?>" required>
                         </div>
-
-                    </section>
-
-                    <section class="column">
 
                         <div class="players-field">
                             <label>Player 5:</label><br>
@@ -68,16 +68,6 @@
                         <div class="players-field">
                             <label>Player 6:</label><br>
                             <input type="text" name="name6" value="<?php echo $name6;?>" required>
-                        </div>
-
-                        <div class="players-field">
-                            <label>Player 7:</label><br>
-                            <input type="text" name="name7" value="<?php echo $name7;?>" required>
-                        </div>
-
-                        <div class="players-field">
-                            <label>Player 8:</label><br>
-                            <input type="text" name="name8" value="<?php echo $name8;?>" required>
                         </div>
 
                     </section>   
@@ -139,22 +129,6 @@
 
                 <div class="player">
                     <p><?php print_r($randomPlay[5]) ?></p>
-                    <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
-                </div>
-            
-                <h3 class="match">MATCH 4 :</h3>
-                <div class="player">
-                    {{-- this is where we display player - if it is NULL, it does not display anything --}}
-                    <p><?php print_r($randomPlay[6]) ?></p>
-                
-                    {{-- this is where we are displaying the scores --}}
-                    <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
-                </div>
-
-                <p class="versus">vs</p>
-
-                <div class="player">
-                    <p><?php print_r($randomPlay[7]) ?></p>
                     <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
                 </div>
 
