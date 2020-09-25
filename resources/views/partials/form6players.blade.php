@@ -98,6 +98,8 @@
                     </div>
                 </div>
                 </section>
+                
+                <section class="column-match3" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>>
 
                 <div class="match">
                     <h3>MATCH 2 :</h3>

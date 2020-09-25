@@ -176,7 +176,15 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
                 vertical-align: text-bottom;
             }
          
+        @media only screen and (min-width: 450px) {
             
+            .column {
+                box-sizing:border-box;
+                float: left;
+                width: 50%;
+            }
+        
+        }
         </style>
     </head>
      <body>
