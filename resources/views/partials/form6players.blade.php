@@ -82,21 +82,23 @@
             {{-- are players randomize and present? if so, we have a match --}}
                 <div class="match">
                     <h3>MATCH 1 :</h3>
-                <div class="player">
-                    {{-- this is where we display player - if it is NULL, it does not display anything --}}
-                    <p><?php print_r($randomPlay[0]) ?></p>
-                
-                    {{-- this is where we are displaying the scores --}}
-                    <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
-                </div>
+                    <div class="player">
+                        {{-- this is where we display player - if it is NULL, it does not display anything --}}
+                        <p><?php print_r($randomPlay[0]) ?></p>
+                    
+                        {{-- this is where we are displaying the scores --}}
+                        <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
+                    </div>
 
-                <p class="versus">vs</p>
+                    <p class="versus">vs</p>
 
                     <div class="player">
                         <p><?php print_r($randomPlay[1]) ?></p>
                         <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
                     </div>
-        
+                </div>
+                </section>
+
                 <div class="match">
                     <h3>MATCH 2 :</h3>
                     <div class="player">
