@@ -1,4 +1,4 @@
-@extends("style")
+@extends("style-mobile")
 @section("title")
 
     @include("partials/header")

@@ -166,7 +166,7 @@
             </section>
 
             <nav>
-                <h4> <a class="navbar-brand" href="/">TRY AGAIN?!</a></h4>
+                <h4> <a class="navbar-brand" href="/">TRY AGAIN ? !</a></h4>
             </nav>
         <main>
     </body>

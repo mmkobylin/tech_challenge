@@ -20,7 +20,6 @@
                 font-family: 'Orbitron', sans-serif;
                 line-height: 1.5;
                 text-align: center;
-                padding-right:2.5rem;
             }
             .card-body {
                 border:none;
@@ -106,6 +105,7 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
                 margin:0.5rem;
             }
             
+            
             .paddle {
                 background: #0f9d18;
                 border-color: rgb(247, 196, 12);
@@ -165,70 +165,7 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
                 vertical-align: text-bottom;
             }
 
-          @media only screen and (min-width: 450px) {
-    
-                body {
-                    color:#0f9d18;
-                    display: flex;
-                    justify-content: center;
-                    background: rgb(18,13,5);
-                    background: linear-gradient(90deg, rgba(18,13,5,1) 22%, rgba(36,80,30,1) 29%, rgba(12,1,1,1) 39%, rgba(19,15,43,1) 79%, rgba(24,25,73,1) 97%);                }
-                }
-
-                button {
-                    background: #0f9d18;
-                    border-color: rgb(247, 196, 12);
-                    color: white;
-                    font-family: 'Press Start 2P', cursive;
-                    flex:100%;
-                    height:4rem;
-                    width:4rem;
-                }
-                .column {
-                    float: left;
-                    width: 45%;
-                    padding: 1rem;
-                }
-                .column-results{
-                    float: left;
-                    width: 45%;
-                    padding: 2rem;
-                    padding-top:1rem;
-                }
-                .card-body, fieldset {
-                    border:none;
-                }
-                
-                input {
-                    margin:1rem;
-                    padding:1.2rem;
-                }
-                
-                input:active, input:hover {
-                    background:black;
-                    transform: translateY(-5px);
-                }
-                label {
-                    font-size: 1.3rem;
-                }
-                .matches{
-                    border:none
-                }
-                .paddle {
-                    background: #0f9d18;
-                    border-color: rgb(247, 196, 12);
-                    display: flex;
-                    justify-content: space-between;
-                    height: 9rem;
-                    width: 1rem;
-                }
-                .title { 
-                    font-family: 'Press Start 2P';
-                    font-size: 4rem;
-                    letter-spacing: 0.5rem;
-                    text-align: center;
-                }
-            }
+         
   
         </style>
     </head>
