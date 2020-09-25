@@ -24,6 +24,14 @@ Route::get('/four_game', function () {
     return view('for4');
 });
 
+Route::get('/six', function () {
+    return view('for6');
+});
+
+Route::get('/six_game', function () {
+    return view('for6');
+});
+
 Route::get('/eight', function () {
     return view('for8');
 });

@@ -1,7 +1,7 @@
 <?php error_reporting (E_ALL ^ E_NOTICE);
 
     //declare an empty array for variables
-    $allPlayers = [];
+    $allPlayers4 = [];
 
     //declare variables that I get from GET method
     $Player1=$_GET['name1'];
@@ -10,10 +10,10 @@
     $Player4=$_GET['name4']; 
 
     //this is where i collect the variables
-    collect(array_push($allPlayers, $Player1, $Player2, $Player3));
+    collect(array_push($allPlayers4, $Player1, $Player2, $Player3, $Player4));
 
     //this is where i shuffle and collect!
-    $randomPlay = (collect($allPlayers)->shuffle()->all());
+    $randomPlay = (collect($allPlayers4)->shuffle()->all());
 ?>
 
 <!DOCTYPE html>
@@ -24,8 +24,7 @@
             {{-- this is where I start the form with GET method 
             this is also where we hide the form when it is submitted--}}
             <form class="form-control" method="GET" <?php if ($randomPlay[3] !== NULL)
-            { ?> hidden <?php } ?> 
-            action="four_game"> 
+            { ?> hidden <?php } ?> action="four_game"> 
                 {{-- using fieldset for group of related elements in the form  --}}
                 <fieldset class="card-body">
                 {{-- Cross-Site Request Forgery Token --}}
@@ -63,7 +62,7 @@
             </form>
 
             {{-- this is where we hide the columns if we have no players --}}
-            <section class="column-results" <?php if ($randomPlay[2] === NULL){ ?> hidden <?php } ?>>
+            <section class="column-results">
 
             {{-- are players randomize and present? if so, we have a match --}}
                 <h3 class="match">MATCH 1 :</h3>
@@ -83,7 +82,7 @@
                 </div>
             </section>
 
-            <section class="column-results" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php   } ?>>
+            <section class="column-results">
 
                 <h3 class="match">MATCH 2 :</h3>
                 <div class="player">

@@ -1,7 +1,7 @@
 <?php error_reporting (E_ALL ^ E_NOTICE);
 
     //declare an empty array for variables
-    $allPlayers8 = [];
+    $allPlayers6 = [];
 
      //declare variables that I get from GET method
     $Player1=$_GET['name1'];
@@ -10,14 +10,13 @@
     $Player4=$_GET['name4']; 
     $Player5=$_GET['name5'];
     $Player6=$_GET['name6'];
-    $Player7=$_GET['name7'];
-    $Player8=$_GET['name8']; 
+    
 
     //this is where i collect the variables
-    collect(array_push($allPlayers8, $Player1, $Player2, $Player3, $Player4, $Player5, $Player6, $Player7, $Player8));
+    collect(array_push($allPlayers6, $Player1, $Player2, $Player3, $Player4, $Player5, $Player6, $Player7, $Player8));
 
     //this is where i shuffle and collect!
-    $randomPlay = (collect($allPlayers8)->shuffle()->all());
+    $randomPlay = (collect($allPlayers6)->shuffle()->all());
 ?>
 
 <!DOCTYPE html>
