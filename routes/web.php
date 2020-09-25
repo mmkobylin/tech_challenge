@@ -17,27 +17,27 @@ Route::get('/', function () {
 });
 
 Route::get('/four', function () {
-    return view('for4');
+    return view('form4');
 });
 
 Route::get('/four_game', function () {
-    return view('for4');
+    return view('form4');
 });
 
 Route::get('/six', function () {
-    return view('for6');
+    return view('form6');
 });
 
 Route::get('/six_game', function () {
-    return view('for6');
+    return view('form6');
 });
 
 Route::get('/eight', function () {
-    return view('for8');
+    return view('form8');
 });
 
 Route::get('/eight_game', function () {
-    return view('for8');
+    return view('form8');
 });
 
 // Route::get('/', function() {
