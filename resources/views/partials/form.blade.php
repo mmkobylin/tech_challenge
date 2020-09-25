@@ -3,14 +3,18 @@
     //declare an empty array for variables
     $allPlayers = [];
 
-    //declare variables that I get from GET method
+     //declare variables that I get from GET method
     $Player1=$_GET['name1'];
     $Player2=$_GET['name2'];
     $Player3=$_GET['name3'];
     $Player4=$_GET['name4']; 
+    $Player5=$_GET['name5'];
+    $Player6=$_GET['name6'];
+    $Player7=$_GET['name7'];
+    $Player8=$_GET['name8']; 
 
     //this is where i collect the variables
-    collect(array_push($allPlayers, $Player1, $Player2, $Player3, $Player4));
+    collect(array_push($allPlayers, $Player1, $Player2, $Player3, $Player4, $Player5, $Player6, $Player7, $Player8));
 
     //this is where i shuffle and collect!
     $randomPlay = (collect($allPlayers)->shuffle()->all());
@@ -21,10 +25,10 @@
 {{-- indentation - body is a child of html --}}
     <body>
         <main>
-            <h2 <?php if ($randomPlay[3] !== NULL){ ?> hidden <?php } ?>> Please enter the players names and press 'Randomise?' ! </h2>
             {{-- this is where I start the form with GET method 
             this is also where we hide the form when it is submitted--}}
-            <form class="form-control" method="GET" <?php if ($randomPlay[3] !== NULL){ ?> hidden <?php } ?> action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+            <form class="form-control" method="GET" <?php if ($randomPlay[3] !== NULL){ ?> hidden <?php } ?> 
+            action="eight_game">  
                 {{-- using fieldset for group of related elements in the form  --}}
                 <fieldset class="card-body">
                 {{-- Cross-Site Request Forgery Token --}}
@@ -102,7 +106,7 @@
                     <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
                 </div>
 
-                <h3 class="match">MATCH 3 :</h3>
+                <h3 class="match">MATCH 2 :</h3>
                 <div class="player">
                     {{-- this is where we display player - if it is NULL, it does not display anything --}}
                     <p><?php print_r($randomPlay[2]) ?></p>
@@ -122,7 +126,7 @@
 
             <section class="column-results" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php   } ?>>    
 
-                <h3 class="match">MATCH 2 :</h3>
+                <h3 class="match">MATCH 3 :</h3>
                 <div class="player">
                     {{-- this is where we display player - if it is NULL, it does not display anything --}}
                     <p><?php print_r($randomPlay[4]) ?></p>
@@ -157,7 +161,7 @@
             </section>
 
             <nav>
-                <h4> <a class="navbar-brand" href="/" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>>PLAY AGAIN?!</a></h4>
+                <h4> <a class="navbar-brand" href="/">TRY AGAIN?!</a></h4>
             </nav>
         <main>
     </body>

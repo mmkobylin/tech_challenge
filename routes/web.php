@@ -16,6 +16,38 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/four', function () {
+    return view('for4');
+});
+
+Route::get('/four_game', function () {
+    return view('for4');
+});
+
+Route::get('/eight', function () {
+    return view('for8');
+});
+
+Route::get('/eight_game', function () {
+    return view('for8');
+});
+
+// Route::get('/', function() {
+//     switch(Input::get('question_type')) {
+//         case 1:
+//             return view("for4");
+//         case 2:
+//             return view("for8");
+//         default:
+//             return view("welcome");
+//     }
+// });
+
+
+
+
+
+
 // Route::get('/', 'Games@create'); //initial form view
 // Route::post('/', 'Games@create'); // next part
 
