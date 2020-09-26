@@ -65,7 +65,8 @@
                     </section>   
                     {{-- pressing this button collects the data --}}
                     <button class="button" type="submit" 
-                    <?php count($randomPlay) !== count(array_unique($randomPlay)) ? "Each player needs an unique name!" : NULL ?>>Randomise?</button>
+                    <?php count($randomPlay) !== count(array_unique($randomPlay)) ? "Each player needs an unique name!" : NULL?>
+                    >Randomise?</button>
                 </fieldset>
             </form>
 

@@ -12,37 +12,35 @@ continued rounds created until the final (last 2 players who have won all matche
 
 ## Plan 
 
-My MVP should:
-1. be able to take input for names of the players;
-2. be able to randomly pick pairs out;
-3. be able to send that information back to user;
-4. Have CSS styling that makes the website accessible and easy to use;
+My MVP should: 
+1. Allow players to enter their names;
+2. Be able to randomly form pairs of players;
+3. Be able to inform the players who they are paired with;
+4. Have CSS styling that helps with website accessibility and general use;
 
-I have decided to implement PHP and Laravel framework for the project, because I felt I had best understanding of the system. Also PHP is compatible with the CSS, which I considered invaluable asset. 
+To accomplish these four goals I have decided to implement PHP and Laravel framework for the project. I feel that I have the best understanding of these.  
 
 ## Idea
 
-I decided to stylize the ping pong for an old fashion arcade game Pong. Yet instead of going to a black and white theme, I decided to go with a black, white and green. The website will still be readable, but looking more modern, and more engaging for the eye of the user. 
+I have decided to stylize ping pong in the fashion of the old arcade game Pong. Instead of going with a black and white theme, I have decided on a black, white and green theme. This will allow a more modern, more engaging and eye-pleasing design without sacrificing legibility for the players. 
 
-After some consideration I decided to add some more or the background, box shadow effects and transform effects, making the site more readable and accessible. I also tried to make the background look like an old fashion monitor background would look like.
+After further consideration I decided to add more to the background, in the form of box shadow and transform effects, both of which further improve accessibility. As part of this process I worked to make the background resemble an old fashioned monitor to stir up some additional nostalgia for my players. 
 
-I decided to design the mobile version first to make it load faster on smaller devices. Then I designed the desktop one, using media queries.
- 
+As the mobile market is extremely important I decided to design for this first to ensure that the program will load faster on smaller devices, and then used media queries to design the desktop version. 
 
 ## Style
 
-All the components and it's features are in alphabetical order in the style.blade.php. 
+All the components of the game and its features are in alphabetical order in the style.blade.php. 
 
 ## Routing
 
-As each field is mandatory, I decided it is for the best to make user choose how many players do they want to include. It currently gives them option of 4, 6, and 8. 
+As each field is mandatory, I decided it is for the best to make the player choose how many other players they would like to include. Currently the options are 4, 6, and 8.
 
-When user is clicking on the number, it is taking them to the screen where they could fill in the names. If they change their mind, they might simply click 'Try again?!' button. 
+When a user clicks on the number of players they want it takes them to the screen where they fill in their names. If they change their mind there is a 'Try Again' button that restarts the selection process.
 
 ## Original Wireframing
 
-I am attaching an original wireframing in the resources/wireframing folder. 
-Some minor stylistic choices had been caused either by taking into an account an overall accessibility of the page, or nature of used programming language.
+I am attaching an original wireframingi n the resources/wireframing folder. Some minor stylistic choices have been dictated by my objective for accessibility, or else by the nature of the programming language I have used.
 
 ## License
 
