@@ -165,6 +165,15 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
                 vertical-align: text-bottom;
             }
 
+            .number-input {
+                color:#FFFF;
+                font-size:1rem; 
+            }
+
+            .plus::before, .plus::after {
+                color:red;
+            }
+
           @media only screen and (min-width: 450px) {
     
                 body {

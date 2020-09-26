@@ -37,17 +37,18 @@
                     {{-- this is  where we collect the player's names--}}
                         <div class="players-field">
                             <label>Player 1:</label><br>
-                            <input type="text" name="name1" value="<?php echo $name1;?>" required>
+                            {{-- this is where I declare name and type and make sure name length is sensible --}}
+                            <input type="text" name="name1" value="<?php echo $name1;?>" maxlength="10" required>
                         </div>
                         
                         <div class="players-field">
                             <label>Player 2:</label><br>
-                            <input type="text" name="name2" value="<?php echo $name2;?>" required>
+                            <input type="text" name="name2" value="<?php echo $name2;?>" maxlength="10" required>
                         </div>
 
                         <div class="players-field">
                             <label>Player 3:</label><br>
-                            <input type="text" name="name3" value="<?php echo $name3;?>" required>
+                            <input type="text" name="name3" value="<?php echo $name3;?>" maxlength="10" required>
                         </div>
 
                     </section>
@@ -57,17 +58,17 @@
                         
                         <div class="players-field">
                             <label>Player 4:</label><br>
-                            <input type="text" name="name4" value="<?php echo $name4;?>" required>
+                            <input type="text" name="name4" value="<?php echo $name4;?>" maxlength="10" required>
                         </div>
 
                         <div class="players-field">
                             <label>Player 5:</label><br>
-                            <input type="text" name="name5" value="<?php echo $name5;?>" required>
+                            <input type="text" name="name5" value="<?php echo $name5;?>" maxlength="10" required>
                         </div>
 
                         <div class="players-field">
                             <label>Player 6:</label><br>
-                            <input type="text" name="name6" value="<?php echo $name6;?>" required>
+                            <input type="text" name="name6" value="<?php echo $name6;?>" maxlength="10" required>
                         </div>
 
                     </section>   
@@ -136,10 +137,16 @@
 
                     <div class="player">
                         <p><?php print_r($randomPlay[5]) ?></p>
-                        <input type="number" id="score" name="score" placeholder="0" min="0" max="21">
+                        <div class="number-input">
+                            <button class="minus" type="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                            <input class="quantity" min="0" max="21" name="quantity" placeholder="0" type="number">
+                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                        </div>
                     </div>
                  </div>
             </section>
+
+ 
 
             <nav>
                 <h4> <a class="navbar-brand" href="/">TRY AGAIN ? !</a></h4>

@@ -56,6 +56,9 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
                 border: 5px double #0f9d18;
             }
             
+            h3 {
+                font-size:2rem;
+            }
             header { 
                 display: flex;
                 justify-content:space-around;
@@ -70,7 +73,6 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
                 font-weight:bolder;
                 color: #0f9d18;	
                 text-align:center;
-
             }
 
             input[type=text], {
@@ -87,6 +89,90 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
                 font-size:1.5rem;
                 text-align:center; 
             }
+
+            input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+   opacity: 1;
+}
+
+{{-- //experiment with the button design --}}
+/**   **************  */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+   opacity: 1;
+}
+
+/**   **************  */
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+
+
+.number-input,
+.number-input * {
+  box-sizing: border-box;
+}
+
+
+.number-input button {
+  outline:none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  align-items: top;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+}
+
+.number-input button:before,
+.number-input button:after {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  width: 1.5rem;
+  height: 3px;
+  background-color: #212121;
+  
+  transform: translate(-50%, -50%);
+}
+.number-input button.plus:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-input input[type=number] {
+  font-family: sans-serif;
+  max-width: 5rem;
+  font-size: 1.5rem;
+  height: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+font-family: 'Press Start 2P', cursive;
+}
+
+.number-input{
+    height:4.5rem;
+}
+
+button.plus, button.minus {
+  background:#0f9d18;
+  border:none;
+}
+
+.quantity {
+    border: none;
+}
             
             input:active {
                 background:black;
@@ -119,12 +205,6 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
             .players-field {
                 margin:1.5rem;
             }
-
-            .player { 
-                text-align:center;     
-                display: flex;
-                justify-content: space-around;  
-            } 
 
             .title { 
                 font-family: 'Press Start 2P', cursive;

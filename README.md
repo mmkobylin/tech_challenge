@@ -41,7 +41,13 @@ When a user clicks on the number of players they want it takes them to the scree
 ## Original Wireframing
 
 I am attaching an original wireframing in the resources/wireframing folder. I created them using balamiq.cloud wireframing software.
-Some minor stylistic choices have been dictated by my objective for accessibility, or else by the nature of the programming language I have used.
+Some minor stylistic choices have been dictated by my objective for accessibility, or else by the nature of the programming language I have used. 
+In addition, original layout of scores had only '+' button. I decided to add '-' to make it more visiually symetrical, but also to in case of an accidental click to '+' field. 
+
+
+## Limitations
+
+I made limit of 10 characters for input to not change CSS layout. I also made maximum of 11 points for a score, as in regular ping pong first to reach 11 points wins the game. 
 
 ## License
 
