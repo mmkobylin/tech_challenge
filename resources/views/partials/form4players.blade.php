@@ -15,12 +15,7 @@
     //this is where i shuffle and collect!
     $randomPlay = (collect($allPlayers4)->shuffle()->all());
 
-    //attempt to make each name unique
     //this is where i am checking if all the names are unique
-    function unique($randomPlay){
-   count($randomPlay) !== count(array_unique($randomPlay)) ?
-    "Each player needs an unique name!" : NULL; 
-    }
 ?>
 
 <!DOCTYPE html>
@@ -30,8 +25,7 @@
         <main>
             {{-- this is where I start the form with GET method 
             this is also where we hide the form when it is submitted--}}
-            <form class="form-control" method="GET" <?php if ($randomPlay[3] !== NULL)
-            { ?> hidden <?php } ?> action="four_game"> 
+            <form class="form-control" method="GET" <?php if ($randomPlay[3] !== NULL){ ?> hidden <?php } ?> action="four_game"> 
                 {{-- using fieldset for group of related elements in the form  --}}
                 <fieldset class="card-body">
                 {{-- Cross-Site Request Forgery Token --}}
@@ -132,6 +126,7 @@
                 </div>
 
             </section>
+            
             <nav>
                 <h4> <a class="navbar-brand" href="/">TRY AGAIN ? !</a></h4>
             </nav>

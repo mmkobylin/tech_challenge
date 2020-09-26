@@ -140,7 +140,7 @@
             </section>
 
             <section class="column" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php   } ?>>    
-    </div>
+            </div>
                 <div class="match">
                 <h3>MATCH 3 :</h3>
                 <div class="player">

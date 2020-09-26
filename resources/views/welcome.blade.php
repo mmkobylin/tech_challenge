@@ -1,4 +1,11 @@
 @extends("style")
+
+@push('head')
+    
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js')}}"></script>
+@endpush
+
 @section("title")
 
     @include("partials/header")

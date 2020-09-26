@@ -2,7 +2,7 @@
 @section("title")
 
     @include("partials/header")
-
+    
 @endsection
 
 @section("content")
