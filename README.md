@@ -51,35 +51,36 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 Please follow these steps:
 
-1. Clone repo
+1. Clone repo <br />
 $ git clone git@github.com:mmkobylin/tech_challenge.git ping-pong
 
-2. Go to the project folder
+2. Go to the project folder <br />
 $ cd ping-pong
 
-3. Install Composer 
-run: 
+3. Install Composer <br />
+run: <br />
  $composer install
 
-4. Install npm
-$ npm install
+4. Install npm <br />
+$ npm install 
 
-5. Create copy of a .env file
-run:
+5. Create copy of a .env file <br />
+run: <br />
 cp .env.example .env
 
-6. Generate an encryption key 
-run:
+6. Generate an encryption key <br />
+run: <br />
 php artisan key:generate
 
-7. Create an empty database for the application 
+7. Create an empty database for the application <br />
 (you can do this directly in MYSQL or use database tool like SequelPro) 
 
-8. Connect the database to Laravel 
+8. Connect the database to Laravel <br />
+
 In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD options to match the credentials of the database you just created. 
 
-9. Migrate the database
-run:
+9. Migrate the database <br />
+run:<br />
 php artisan migrate. 
 
 10. Enjoy!
