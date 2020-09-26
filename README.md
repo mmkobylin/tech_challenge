@@ -40,8 +40,47 @@ When a user clicks on the number of players they want it takes them to the scree
 
 ## Original Wireframing
 
-I am attaching an original wireframingi n the resources/wireframing folder. Some minor stylistic choices have been dictated by my objective for accessibility, or else by the nature of the programming language I have used.
+I am attaching an original wireframing in the resources/wireframing folder. I created them using balamiq.cloud wireframing software.
+Some minor stylistic choices have been dictated by my objective for accessibility, or else by the nature of the programming language I have used.
 
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Installation 
+
+Please follow these steps:
+
+1. Clone repo
+$ git clone git@github.com:mmkobylin/tech_challenge.git ping-pong
+
+2. Go to the project folder
+$ cd ping-pong
+
+3. Install Composer 
+run: 
+ $composer install
+
+4. Install npm
+$ npm install
+
+5. Create copy of a .env file
+run:
+cp .env.example .env
+
+6. Generate an encryption key 
+run:
+php artisan key:generate
+
+7. Create an empty database for the application 
+(you can do this directly in MYSQL or use database tool like SequelPro) 
+
+8. Connect the database to Laravel 
+In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD options to match the credentials of the database you just created. 
+
+9. Migrate the database
+run:
+php artisan migrate. 
+
+10. Enjoy!
+
