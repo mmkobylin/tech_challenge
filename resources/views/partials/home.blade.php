@@ -1,7 +1,5 @@
 <p class="rules">
-    Please click the number of players,
-    enter the players names,
-    and press 'Randomise?' ! 
+    Please click the number of players, enter the players names and press 'Randomise?' ! 
 <p>
 
 <h5 class="navbar-brand">Players:</h5>

@@ -9,4 +9,6 @@
 
         @include("partials/home")
 
+        @include("partials/warning")
+
 @endsection

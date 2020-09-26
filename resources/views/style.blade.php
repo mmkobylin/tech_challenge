@@ -296,15 +296,13 @@
 
     <body>
         <header>
-            <div class="container">
+            
+            @yield("title")
 
-            </div>
         </header>
         
         <main class="content">
 
-            @yield("title")
-            
             @yield("content")
 
         </main>

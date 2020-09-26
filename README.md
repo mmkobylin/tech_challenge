@@ -18,7 +18,7 @@ My MVP should:
 3. Be able to inform the players who they are paired with;
 4. Have CSS styling that helps with website accessibility and general use;
 
-To accomplish these four goals I have decided to implement PHP and Laravel framework for the project. I feel that I have the best understanding of these.  
+To accomplish these four goals I have decided to implement PHP and Laravel framework for the project. I feel that I have the best understanding of these. I decided against making the Pong a full stack project, because of time constrains. I also used some of vanilla JavaScript functions to make the site more interactive - as in the case of using onclick on scores buttons.
 
 ## Idea
 
