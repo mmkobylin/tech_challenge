@@ -153,7 +153,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .number-input input[type=number] {
   font-family: sans-serif;
-  max-width: 5rem;
+  max-width: 5.3rem;
   font-size: 1.5rem;
   height: 1.5rem;
   font-weight: bold;
