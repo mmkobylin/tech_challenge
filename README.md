@@ -58,29 +58,28 @@ $ git clone git@github.com:mmkobylin/tech_challenge.git ping-pong
 $ cd ping-pong
 
 3. Install Composer <br />
-run: <br />
+run: 
  $composer install
 
 4. Install npm <br />
 $ npm install 
 
 5. Create copy of a .env file <br />
-run: <br />
+run: 
 cp .env.example .env
 
 6. Generate an encryption key <br />
-run: <br />
+run: 
 php artisan key:generate
 
 7. Create an empty database for the application <br />
 (you can do this directly in MYSQL or use database tool like SequelPro) 
 
 8. Connect the database to Laravel <br />
-
 In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD options to match the credentials of the database you just created. 
 
 9. Migrate the database <br />
-run:<br />
+run:
 php artisan migrate. 
 
 10. Enjoy!
