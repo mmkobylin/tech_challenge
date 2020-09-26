@@ -66,7 +66,9 @@ box-shadow: 1px 1px 65px 12px rgba(43,102,3,0.66);
                 border: 2px solid #0f9d18;
                 padding:0.2rem;
                 font-family: 'Orbitron', sans-serif;
+                font-size:1rem;
                 color: #0f9d18;	
+                text-align:center;
             }
 
             input[type=text], {
