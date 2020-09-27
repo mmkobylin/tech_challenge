@@ -34,12 +34,12 @@
                     {{-- this is  where we get the player's names--}}
                         <div class="players-field">
                             <label>Player 1:</label><br>
-                            <input type="text" name="name1" value="<?php echo $name1;?>"  minlength="2" maxlength="10" required>
+                            <input type="text" name="name1" value=""  minlength="2" maxlength="10" required>
                         </div>
                         
                         <div class="players-field">
                             <label>Player 2:</label><br>
-                            <input type="text" name="name2" value="<?php echo $name2;?>"  minlength="2" maxlength="10" required>
+                            <input type="text" name="name2" value=""  minlength="2" maxlength="10" required>
                         </div>
                     </section>
 
@@ -47,12 +47,12 @@
 
                         <div class="players-field">
                             <label>Player 3:</label><br>
-                            <input type="text" name="name3" value="<?php echo $name3;?>"  minlength="2" maxlength="10" required>
+                            <input type="text" name="name3" value=""  minlength="2" maxlength="10" required>
                         </div>
 
                         <div class="players-field">
                             <label>Player 4:</label><br>
-                            <input type="text" name="name4" value="<?php echo $name4;?>"  minlength="2" maxlength="10" required>
+                            <input type="text" name="name4" value=""  minlength="2" maxlength="10" required>
                         </div>
 
                     </section>  
@@ -130,6 +130,36 @@
                 {{-- directory takes back to the home screen --}}
                 <h4> <a class="navbar-brand" href="/">TRY AGAIN ? !</a></h4>
             </nav>
-        <main>
+        </main>
     </body>
 </html>
+
+<script defer>
+    //declaring the variables by taking querySelector from input[type=text]
+    var frm = document.querySelector('form.form-control');
+    var inputs = frm.querySelectorAll('input[type=text]');
+
+//stopping the form from automatically submitting
+    frm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var classArr = [];
+    // if the name repeats, change background to green
+        for(var i = 0; i < inputs.length; i++) {
+            if(classArr.indexOf(inputs[i].value) != -1) {
+                inputs[i].style.backgroundColor = "green";
+                return false;
+            }
+    //otherwisde submit form
+            else
+                classArr.push(inputs[i].value);
+        }
+        frm.submit();
+    });
+
+//if the input field is in the focus change the background to black
+    for(var j = 0; j < inputs.length; j++) {
+        inputs[j].addEventListener('focus', function() {
+            this.style.backgroundColor = "black";
+        });
+    }
+</script>
