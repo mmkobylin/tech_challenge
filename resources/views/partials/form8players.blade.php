@@ -153,16 +153,18 @@
                         </div>               
                     </div>
 
-                <p>vs</p>
+                    <p>vs</p>
 
-                <div class="player">
-                    <p><?php print_r($randomPlay[5]) ?></p>
-                    <div class="number-input">
-                        <button class="minus" type="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                        <input class="quantity" min="0" max="11" name="quantity" placeholder="0" type="number">
-                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                    </div>             
-                </div>
+                    <div class="player">
+                        <p><?php print_r($randomPlay[5]) ?></p>
+                        <div class="number-input">
+                            <button class="minus" type="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                            <input class="quantity" min="0" max="11" name="quantity" placeholder="0" type="number">
+                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                        </div>             
+                    </div>
+                </div> 
+                
                 <div class="match">
                     <h3>MATCH 4 :</h3>
                     <div class="player">
