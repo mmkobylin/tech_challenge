@@ -1,3 +1,4 @@
 <p class="rules">
-    Please make sure each name has between 2 and 10 characters. 
+    Each name has to have between 2 and 10 characters and be unique! <br>
+    Otherwise, the background of the field will change to green!
 <p>

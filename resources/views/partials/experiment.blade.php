@@ -17,10 +17,9 @@
 
 ?>
 
-<!DOCTYPE html>
-<html> 
-    {{-- indentation - body is a child of html --}}
-    <body>
+<!DOCTYPE >
+<html>
+     <body>
         <main>
             {{-- this is where I start the form with GET method 
             this is also where we hide the form when it is submitted--}}
@@ -134,8 +133,8 @@
     </body>
 </html>
 
-<script>
-    //this is where we make sure the names are unique
+
+<script defer>
     //declaring the variables by taking querySelector from input[type=text]
     var frm = document.querySelector('form.form-control');
     var inputs = frm.querySelectorAll('input[type=text]');

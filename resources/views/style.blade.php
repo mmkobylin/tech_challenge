@@ -244,64 +244,94 @@
                 text-align: center;
             }
 
+                @media only screen and (min-width: 500px) {
+                    
+                    a {
+                        box-sizing:border-box;
+                        float: center;
+                        width: 100%;
+                    }
+                    
+                    .column {
+                        box-sizing:border-box;
+                        float: left;
+                        width: 50%;
+                    }
 
-            @media only screen and (min-width: 500px) {
-                
-                a {
-                    box-sizing:border-box;
-                    float: center;
-                    width: 100%;
-                }
-                
-                .column {
-                    box-sizing:border-box;
-                    float: left;
-                    width: 50%;
-                }
+                    .column-match3 {
+                        box-sizing:border-box;
+                        float: left;
+                        width: 33.3%;
+                    }
 
-                .column-match3 {
-                    box-sizing:border-box;
-                    float: left;
-                    width: 33.3%;
-                }
+                    .navbar-brand {
+                        font-size:2rem;
+                        margin:4rem;
+                    }
 
-                .navbar-brand {
-                    font-size:2rem;
-                    margin:4rem;
-                }
+                    input {
+                        margin:1rem;
+                        padding:1.2rem;
+                        max-width: 9rem;
 
-                input {
-                    margin:1rem;
-                    padding:1.2rem;
-                    max-width: 9rem;
+                    }
+                    
+                    input:active, input:hover {
+                        background:black;
+                        transform: translateY(-5px);
+                    }
 
-                }
-                
-                input:active, input:hover {
-                    background:black;
-                    transform: translateY(-5px);
-                }
+                    h3 {
+                        font-size:2rem;
+                    }
+                    label {
+                        font-size: 1.3rem;
+                    }
 
-                h3 {
-                    font-size:2rem;
+                    .rules {
+                        border: 5px double #0f9d18;
+                        font-size:1.5rem;
+                        list-style-type:none;
+                        line-height:2;
+                        padding:3rem;
+                        margin:0.5rem;
+                    }
                 }
-                label {
-                    font-size: 1.3rem;
-                }
-
-                .rules {
-                    border: 5px double #0f9d18;
-                    font-size:1.5rem;
-                    list-style-type:none;
-                    line-height:2;
-                    padding:3rem;
-                    margin:0.5rem;
-                }
-
-            }
             }
 
         </style>
+        
+    
+        <script defer>
+            //this is where we make sure the names are unique
+            //declaring the variables by taking querySelector from input[type=text]
+            var frm = document.querySelector('form.form-control');
+            var inputs = frm.querySelectorAll('input[type=text]');
+
+        //stopping the form from automatically submitting
+            frm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var classArr = [];
+            // if the name repeats, change background to green
+                for(var i = 0; i < inputs.length; i++) {
+                    if(classArr.indexOf(inputs[i].value) != -1) {
+                        inputs[i].style.backgroundColor = "green";
+                        return false;
+                    }
+            //otherwisde submit form
+                    else
+                        classArr.push(inputs[i].value);
+                }
+                frm.submit();
+            });
+
+        //if the input field is in the focus change the background to black
+            for(var j = 0; j < inputs.length; j++) {
+                inputs[j].addEventListener('focus', function() {
+                    this.style.backgroundColor = "black";
+                });
+            }
+        </script>
 
     </head>
 

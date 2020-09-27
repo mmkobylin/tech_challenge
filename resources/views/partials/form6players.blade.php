@@ -176,6 +176,8 @@
 </html>
 
 <script defer>
+     //this is where we make sure the names are unique
+
     //declaring the variables by taking querySelector from input[type=text]
     var frm = document.querySelector('form.form-control');
     var inputs = frm.querySelectorAll('input[type=text]');
