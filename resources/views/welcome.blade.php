@@ -11,6 +11,8 @@
 {{-- content - home and instructions --}}
 @section("content")
 
-        @include("partials/home")
+     @include("partials/home")
+
+    @include("partials/warning")
 
 @endsection

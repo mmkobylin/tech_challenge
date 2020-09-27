@@ -22,7 +22,7 @@
             body {
                 background: rgb(18,13,5);
                 background: linear-gradient(90deg, rgba(18,13,5,1) 22%, rgba(36,80,30,1) 29%, rgba(12,1,1,1) 39%, rgba(19,15,43,1) 79%, rgba(24,25,73,1) 97%);                
-                color: #0f9d18;
+                color: #00FF00;
                 font-family: 'Orbitron', sans-serif;
                 line-height: 1.5;
                 text-align: center;
@@ -71,7 +71,7 @@
             input { 
                 background: transparent; 
                 border: 2px solid #0f9d18;
-                color: #0f9d18;
+                color: #00FF00;
                 font-family: 'Orbitron', sans-serif;
                 font-size:1rem;
                 font-weight:bolder;
@@ -97,7 +97,7 @@
                 appearance: textfield;
                 border: none;
                 background: transparent; 
-                color: #0f9d18;
+                color: #00FF00;
                 font-family: 'Press Start 2P', cursive;
                 font-size:1.5rem;
                     -moz-appearance: textfield;
@@ -201,18 +201,17 @@
             }
 
             button.plus, button.minus {
-                background:#0f9d18;
+                background:#00FF00;
                 border:none;
             }
 
-                p {
+            p {
                 font-size: 1.5rem;
                 vertical-align: text-bottom;
             }
 
             .paddle {
-                background: #0f9d18;
-                border-color: rgb(247, 196, 12);
+                background: #00FF00;
                 height: 6rem;
                 width: 0.8rem;
             }
@@ -290,9 +289,6 @@
                         font-size: 1.3rem;
                     }
 
-                    .padding {
-                        display:hidden;
-                    }
                     .rules {
                         border: 5px double #0f9d18;
                         font-size:1.5rem;
@@ -305,38 +301,6 @@
             }
 
         </style>
-        
-    
-        <script defer>
-            //this is where we make sure the names are unique
-            //declaring the variables by taking querySelector from input[type=text]
-            var frm = document.querySelector('form.form-control');
-            var inputs = frm.querySelectorAll('input[type=text]');
-
-        //stopping the form from automatically submitting
-            frm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                var classArr = [];
-            // if the name repeats, change background to green
-                for(var i = 0; i < inputs.length; i++) {
-                    if(classArr.indexOf(inputs[i].value) != -1) {
-                        inputs[i].style.backgroundColor = "green";
-                        return false;
-                    }
-            //otherwisde submit form
-                    else
-                        classArr.push(inputs[i].value);
-                }
-                frm.submit();
-            });
-
-        //if the input field is in the focus change the background to black
-            for(var j = 0; j < inputs.length; j++) {
-                inputs[j].addEventListener('focus', function() {
-                    this.style.backgroundColor = "black";
-                });
-            }
-        </script>
 
     </head>
 

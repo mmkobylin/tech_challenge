@@ -11,8 +11,6 @@
 {{-- warning and form for 4 players --}}
 @section("content")
 
-   @include("partials/warning")
-   
    @include("partials/form4players")
    
 @endsection

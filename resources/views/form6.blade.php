@@ -13,6 +13,6 @@
    
     @include("partials/warning")
 
-   @include("partials/form6players")
+    @include("partials/form6players")
    
 @endsection
