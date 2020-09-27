@@ -1,6 +1,6 @@
 # Ping Pong Challenge
 
-## The Brief
+## The Instructions
 
 The core of the challenge is to create a tool which randomly creates pairings for a table tennis tournament bracket from a list of names collected from the user.
 
@@ -18,7 +18,7 @@ My MVP should:
 3. Be able to inform the players who they are paired with;
 4. Have CSS styling that helps with website accessibility and general use;
 
-To accomplish these four goals I have decided to implement PHP and Laravel framework for the project. I feel that I have the best understanding of these. I decided against making the Pong a full stack project, because of time constrains. I also used some of vanilla JavaScript functions to make the site more interactive - as in the case of using onclick on scores buttons.
+To accomplish these four goals I have decided to implement PHP and Laravel framework for the project. I feel that I have the best understanding of these. I decided against making the Pong a full stack project, because of time constrains. I also used vanilla JavaScript functions to make the site more interactive - as in the case of using onclick on scores buttons.
 
 ## Idea
 
@@ -26,11 +26,11 @@ I have decided to stylize ping pong in the fashion of the old arcade game Pong. 
 
 After further consideration I decided to add more to the background, in the form of box shadow and transform effects, both of which further improve accessibility. As part of this process I worked to make the background resemble an old fashioned monitor to stir up some additional nostalgia for my players. 
 
-As the mobile market is extremely important I decided to design for this first to ensure that the program will load faster on smaller devices, and then used media queries to design the desktop version. 
+As the mobile market is extremely important I decided to design for this first to ensure that the program will load faster on smaller devices, and then used media query to design the desktop version. 
 
 ## Style
 
-All the components of the game and its features are in alphabetical order in the style.blade.php. 
+All the components of the game and its features are in alphabetical order in the style section of style.blade.php. 
 
 ## Routing
 
@@ -42,11 +42,12 @@ When a user clicks on the number of players they want it takes them to the scree
 
 I am attaching an original design in the resources/wireframing folder. I created them using balamiq.cloud wireframing software.
 Some minor stylistic choices have been dictated by my objective for accessibility, or else by the nature of the programming language I have used. 
+
 In addition, original layout of scores had only '+' button. I decided to add '-' to make it more visiually symetrical, but also in case of an accidental click on '+' field. 
 
 ## Comments
 
-All the comments regarding code are line above an actual code. I decided leaving comments at the first case is enough, instead of commenting on each occurence (such as 'creating column' etc).
+All the comments regarding code are on the line above an actual code. I decided leaving comments at the first case is enough, instead of commenting on each occurence (such as 'creating column' etc).
 
 ## Limitations
 
