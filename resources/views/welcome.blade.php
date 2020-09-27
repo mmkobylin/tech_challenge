@@ -1,17 +1,14 @@
+{{-- style imported --}}
 @extends("style")
 
-@push('head')
-    
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js')}}"></script>
-@endpush
-
+{{-- header sectio  --}}
 @section("title")
 
     @include("partials/header")
 
 @endsection
 
+{{-- content - home and instructions --}}
 @section("content")
 
         @include("partials/home")
