@@ -24,29 +24,29 @@
     <body>
         <main>
             {{-- this is where I start the form with GET method 
-            this is also where we hide the vagrant form when it is submitted--}}
+            this is also where we hide thevagrant e form when it is submitted--}}
             <form class="form-control" method="GET" <?php if ($randomPlay[3] !== NULL){ ?> hidden <?php } ?> action="six_game">  
                 {{-- using fieldset for group of related elements in the form  --}}
                 <fieldset class="card-body">
                 {{-- Cross-Site Request Forgery Token --}}
                     @csrf
-                    {{-- creating first column, they have to be in separate sections --}}
+                    {{-- creating first column --}}
                     <section class="column">
                     {{-- this is  where we collect the player's names--}}
                         <div class="players-field">
                             <label>Player 1:</label><br>
                             {{-- this is where I declare name and type and make sure name length is sensible --}}
-                            <input type="text" name="name1" value="<?php echo $name1;?>" maxlength="10" required>
+                            <input type="text" name="name1" value="<?php echo $name1;?>" minlength="2" maxlength="10" required>
                         </div>
                         
                         <div class="players-field">
                             <label>Player 2:</label><br>
-                            <input type="text" name="name2" value="<?php echo $name2;?>" maxlength="10" required>
+                            <input type="text" name="name2" value="<?php echo $name2;?>" minlength="2" maxlength="10" required>
                         </div>
 
                         <div class="players-field">
                             <label>Player 3:</label><br>
-                            <input type="text" name="name3" value="<?php echo $name3;?>" maxlength="10" required>
+                            <input type="text" name="name3" value="<?php echo $name3;?>" minlength="2" maxlength="10" required>
                         </div>
 
                     </section>
@@ -56,17 +56,17 @@
                         
                         <div class="players-field">
                             <label>Player 4:</label><br>
-                            <input type="text" name="name4" value="<?php echo $name4;?>" maxlength="10" required>
+                            <input type="text" name="name4" value="<?php echo $name4;?>" minlength="2" maxlength="10" required>
                         </div>
 
                         <div class="players-field">
                             <label>Player 5:</label><br>
-                            <input type="text" name="name5" value="<?php echo $name5;?>" maxlength="10" required>
+                            <input type="text" name="name5" value="<?php echo $name5;?>" minlength="2" maxlength="10" required>
                         </div>
 
                         <div class="players-field">
                             <label>Player 6:</label><br>
-                            <input type="text" name="name6" value="<?php echo $name6;?>" maxlength="10" required>
+                            <input type="text" name="name6" value="<?php echo $name6;?>" minlength="2" maxlength="10" required>
                         </div>
 
                     </section>   

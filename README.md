@@ -44,6 +44,9 @@ I am attaching an original design in the resources/wireframing folder. I created
 Some minor stylistic choices have been dictated by my objective for accessibility, or else by the nature of the programming language I have used. 
 In addition, original layout of scores had only '+' button. I decided to add '-' to make it more visiually symetrical, but also in case of an accidental click on '+' field. 
 
+## Comments
+
+All the comments regarding code are line above an actual code.
 
 ## Limitations
 
