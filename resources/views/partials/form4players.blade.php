@@ -15,32 +15,31 @@
     //this is where i shuffle and collect!
     $randomPlay = (collect($allPlayers4)->shuffle()->all());
 
-    //this is where i am checking if all the names are unique
 ?>
 
 <!DOCTYPE html>
 <html> 
-{{-- indentation - body is a child of html --}}
+    {{-- indentation - body is a child of html --}}
     <body>
         <main>
             {{-- this is where I start the form with GET method 
             this is also where we hide the form when it is submitted--}}
             <form class="form-control" method="GET" <?php if ($randomPlay[3] !== NULL){ ?> hidden <?php } ?> action="four_game"> 
-                {{-- using fieldset for group of related elements in the form  --}}
+                {{-- I am using fieldset for group of related elements in the form  --}}
                 <fieldset class="card-body">
                 {{-- Cross-Site Request Forgery Token --}}
                     @csrf
                     {{-- creating first column, they have to be in separate sections --}}
                     <section class="column">
-                    {{-- this is  where we collect the player's names--}}
+                    {{-- this is  where we get the player's names--}}
                         <div class="players-field">
                             <label>Player 1:</label><br>
-                            <input type="text" name="name1" value="<?php echo $name1;?>"  maxlength="10" required>
+                            <input type="text" name="name1" value="<?php echo $name1;?>"  minlength="2" maxlength="10" required>
                         </div>
                         
                         <div class="players-field">
                             <label>Player 2:</label><br>
-                            <input type="text" name="name2" value="<?php echo $name2;?>"  maxlength="10" required>
+                            <input type="text" name="name2" value="<?php echo $name2;?>"  minlength="2" maxlength="10" required>
                         </div>
                     </section>
 
@@ -48,37 +47,39 @@
 
                         <div class="players-field">
                             <label>Player 3:</label><br>
-                            <input type="text" name="name3" value="<?php echo $name3;?>"  maxlength="10" required>
+                            <input type="text" name="name3" value="<?php echo $name3;?>"  minlength="2" maxlength="10" required>
                         </div>
 
                         <div class="players-field">
                             <label>Player 4:</label><br>
-                            <input type="text" name="name4" value="<?php echo $name4;?>"  maxlength="10" required>
+                            <input type="text" name="name4" value="<?php echo $name4;?>"  minlength="2" maxlength="10" required>
                         </div>
 
-                    </section>   
+                    </section>  
+
                     {{-- pressing this button collects the data --}}
-                    <button class="button" type="submit" 
-                    <?php count($randomPlay) !== count(array_unique($randomPlay)) ? "Each player needs an unique name!" : NULL?>
-                    >Randomise?</button>
+                    <button class="button" type="submit">Randomise?</button>
                 </fieldset>
             </form>
 
-            {{-- this is where we hide the columns if we have no players --}}
+            {{-- this is where we hide the column with the matches if we have no players --}}
             <section class="column" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>> 
 
-            {{-- are players randomize and present? if so, we have a match --}}
+                {{-- are players randomize and present? if so, we have a match --}}
                 <div class="match">
 
-                     <h3>MATCH 1 :</h3>
+                    <h3>MATCH 1 :</h3>
                     <div class="player">
-                        {{-- this is where we display player - if it is NULL, it does not display anything --}}
+                        {{-- this is where we display player--}}
                         <p><?php print_r($randomPlay[0]) ?></p>
                     
                         {{-- this is where we are displaying the scores --}}
                         <div class="number-input">
+                            {{-- onclick method used to change the score by substracting 1 --}}
                             <button class="minus" type="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                            {{-- input represents the scores, min 0, max 11 --}}
                             <input class="quantity" min="0" max="11" name="quantity" placeholder="0" type="number">
+                            {{-- onclick method used to change the score by adding 1 --}}
                             <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
                         </div>
                     </div>
@@ -102,10 +103,8 @@
 
                     <h3>MATCH 2 :</h3>
                     <div class="player">
-                        {{-- this is where we display player - if it is NULL, it does not display anything --}}
                         <p><?php print_r($randomPlay[2]) ?></p>
                     
-                        {{-- this is where we are displaying the scores --}}
                         <div class="number-input">
                             <button class="minus" type="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
                             <input class="quantity" min="0" max="11" name="quantity" placeholder="0" type="number">
@@ -128,6 +127,7 @@
             </section>
             
             <nav>
+                {{-- directory takes back to the home screen --}}
                 <h4> <a class="navbar-brand" href="/">TRY AGAIN ? !</a></h4>
             </nav>
         <main>
