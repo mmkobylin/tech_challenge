@@ -197,32 +197,32 @@
     </body>
 </html>
 
-<script defer>
+<script>
     //this is where we make sure the names are unique
     //declaring the variables by taking querySelector from input[type=text]
-    var frm = document.querySelector('form.form-control');
-    var inputs = frm.querySelectorAll('input[type=text]');
+    var form = document.querySelector('form.form-control');
+    var players = form.querySelectorAll('input[type=text]');
 
 //stopping the form from automatically submitting
-    frm.addEventListener('submit', function(e) {
+    form.addEventListener('submit', function(e) {
         e.preventDefault();
-        var classArr = [];
+        var playersArray = [];
     // if the name repeats, change background to green
-        for(var i = 0; i < inputs.length; i++) {
-            if(classArr.indexOf(inputs[i].value) != -1) {
-                inputs[i].style.backgroundColor = "green";
+        for(var i = 0; i < players.length; i++) {
+            if(playersArray.indexOf(players[i].value) != -1) {
+                players[i].style.backgroundColor = "chartreuse";
                 return false;
             }
     //otherwisde submit form
             else
-                classArr.push(inputs[i].value);
+                playersArray.push(players[i].value);
         }
-        frm.submit();
+        form.submit();
     });
 
 //if the input field is in the focus change the background to black
-    for(var j = 0; j < inputs.length; j++) {
-        inputs[j].addEventListener('focus', function() {
+    for(var j = 0; j < players.length; j++) {
+        players[j].addEventListener('focus', function() {
             this.style.backgroundColor = "black";
         });
     }

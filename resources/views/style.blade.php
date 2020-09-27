@@ -55,7 +55,9 @@
 
             .form-control{
                 border: 5px double #0f9d18;
-            }
+                font-size:1.2rem;
+                margin:0.5rem;
+            }            
 
             h3 {
                 font-size:1.5rem;
@@ -288,6 +290,9 @@
                         font-size: 1.3rem;
                     }
 
+                    .padding {
+                        display:hidden;
+                    }
                     .rules {
                         border: 5px double #0f9d18;
                         font-size:1.5rem;

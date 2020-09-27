@@ -8,9 +8,11 @@
 
 @endsection
 
-{{-- form for 6 --}}
+{{-- warning and form for 6 --}}
 @section("content")
    
+    @include("partials/warning")
+
    @include("partials/form6players")
    
 @endsection
