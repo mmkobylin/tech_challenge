@@ -40,9 +40,9 @@ When a user clicks on the number of players they want it takes them to the scree
 
 ## Original Wireframing
 
-I am attaching an original wireframing in the resources/wireframing folder. I created them using balamiq.cloud wireframing software.
+I am attaching an original design in the resources/wireframing folder. I created them using balamiq.cloud wireframing software.
 Some minor stylistic choices have been dictated by my objective for accessibility, or else by the nature of the programming language I have used. 
-In addition, original layout of scores had only '+' button. I decided to add '-' to make it more visiually symetrical, but also to in case of an accidental click to '+' field. 
+In addition, original layout of scores had only '+' button. I decided to add '-' to make it more visiually symetrical, but also in case of an accidental click on '+' field. 
 
 
 ## Limitations

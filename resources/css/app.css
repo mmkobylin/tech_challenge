@@ -1,6 +1,4 @@
-body {
-    background-color: red;
-}
+
 
 a:active, a:hover {
     transform: translateY(5px);

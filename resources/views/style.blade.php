@@ -56,7 +56,7 @@
             }
 
             h3 {
-                font-size:2rem;
+                font-size:1.5rem;
             }
 
             header { 
@@ -71,6 +71,7 @@
                 font-family: 'Orbitron', sans-serif;
                 font-size:1rem;
                 font-weight:bolder;
+                max-width: 8rem;
                 padding:0.2rem;
                 text-align:center;
             }
@@ -269,6 +270,8 @@
                 input {
                     margin:1rem;
                     padding:1.2rem;
+                    max-width: 9rem;
+
                 }
                 
                 input:active, input:hover {
@@ -276,6 +279,9 @@
                     transform: translateY(-5px);
                 }
 
+                h3 {
+                    font-size:2rem;
+                }
                 label {
                     font-size: 1.3rem;
                 }
@@ -291,7 +297,6 @@
             }
 
         </style>
-
 
     </head>
 
