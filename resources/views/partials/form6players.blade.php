@@ -20,12 +20,12 @@
 
 <!DOCTYPE html>
 <html> 
-{{-- indentation - body is a child of html --}}
+    {{-- indentation - body is a child of html --}}
     <body>
         <main>
             {{-- this is where I start the form with GET method 
-            this is also where we hide thevagrant e form when it is submitted--}}
-            <form class="form-control" method="GET" <?php if ($randomPlay[3] !== NULL){ ?> hidden <?php } ?> action="six_game">  
+            this is also where we hide the form when it is submitted--}}
+            <form class="form-control" method="GET" <?php if ($allPlayers6[5] !== NULL){ ?> hidden <?php } ?> action="six_game">  
                 {{-- using fieldset for group of related elements in the form  --}}
                 <fieldset class="card-body">
                 {{-- Cross-Site Request Forgery Token --}}
@@ -78,7 +78,7 @@
             {{-- this is where we hide the columns if we have no players --}}
             <section class="column-match3" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>>
 
-            {{-- are players randomize and present? if so, we have a match --}}
+                {{-- are players randomize and present? if so, we have a match --}}
                 <div class="match">
                     <h3>MATCH 1 :</h3>
                     <div class="player">
@@ -87,10 +87,13 @@
                     
                         {{-- this is where we are displaying the scores --}}
                         <div class="number-input">
+                            {{-- onclick method used to change the score by substracting 1 --}}
                             <button class="minus" type="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                            {{-- input represents the scores, min 0, max 11 --}}
                             <input class="quantity" min="0" max="11" name="quantity" placeholder="0" type="number">
+                            {{-- onclick method used to change the score by adding 1 --}}
                             <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                        </div> 
+                        </div>
                     </div>
 
                     <p>vs</p>
@@ -104,17 +107,15 @@
                         </div> 
                     </div>
                 </div>
-                </section>
+            </section>
                 
-                <section class="column-match3" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>>
+            <section class="column-match3" <?php if ($randomPlay[3] === NULL){ ?> hidden <?php } ?>>
 
                 <div class="match">
                     <h3>MATCH 2 :</h3>
                     <div class="player">
-                        {{-- this is where we display player - if it is NULL, it does not display anything --}}
                         <p><?php print_r($randomPlay[2]) ?></p>
                     
-                        {{-- this is where we are displaying the scores --}}
                         <div class="number-input">
                             <button class="minus" type="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
                             <input class="quantity" min="0" max="11" name="quantity" placeholder="0" type="number">
@@ -161,12 +162,13 @@
                             <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
                         </div>
                     </div>
-                 </div>
+                </div>
             </section>
 
  
 
             <nav>
+                {{-- nav takes back to home page --}}
                 <h4> <a class="navbar-brand" href="/">TRY AGAIN ? !</a></h4>
             </nav>
         <main>

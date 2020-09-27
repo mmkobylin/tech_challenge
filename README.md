@@ -46,7 +46,7 @@ In addition, original layout of scores had only '+' button. I decided to add '-'
 
 ## Comments
 
-All the comments regarding code are line above an actual code.
+All the comments regarding code are line above an actual code. I decided leaving comments at the first case is enough, instead of commenting on each occurence (such as 'creating column' etc).
 
 ## Limitations
 

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <!--how to control page scaling, ie. initial scale =1-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
 
         <title>PONG</title>
 
@@ -71,7 +73,7 @@
                 font-family: 'Orbitron', sans-serif;
                 font-size:1rem;
                 font-weight:bolder;
-                max-width: 8rem;
+                max-width: 10rem;
                 padding:0.2rem;
                 text-align:center;
             }
@@ -242,7 +244,8 @@
                 text-align: center;
             }
 
-            @media only screen and (min-width: 450px) {
+
+            @media only screen and (min-width: 500px) {
                 
                 a {
                     box-sizing:border-box;
@@ -294,6 +297,8 @@
                     padding:3rem;
                     margin:0.5rem;
                 }
+
+            }
             }
 
         </style>
