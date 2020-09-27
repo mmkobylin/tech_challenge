@@ -213,6 +213,7 @@
             .paddle {
                 background: #00FF00;
                 height: 6rem;
+                position: static;
                 width: 0.8rem;
             }
 
@@ -263,6 +264,10 @@
                         box-sizing:border-box;
                         float: left;
                         width: 33.3%;
+                    }
+
+                    .paddle {
+                        display: none;
                     }
 
                     .navbar-brand {

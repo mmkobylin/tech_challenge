@@ -1,6 +1,6 @@
 <header>
-    <div class="paddle"></div>
-    <h1 class="title"> PONG!<h1> 
-    <div class="paddle"></div>
+    <div class="part-header paddle"></div>
+    <h1 class="part-header title"> PONG!<h1> 
+    <div class="part-header paddle"></div>
 </header> 
 

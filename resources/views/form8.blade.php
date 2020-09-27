@@ -10,8 +10,6 @@
 
 {{-- warning and form for 8 --}}
 @section("content")
-
-    @include("partials/warning")
    
     @include("partials/form8players")
    
